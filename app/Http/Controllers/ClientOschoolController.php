@@ -14,9 +14,9 @@ class ClientOschoolController extends Controller
      */
     public function index()
     {
-        $clientOschools=ClientOschool::orderby ('nom','asc')->paginate(5);
-        return view('ClientOschools.index',['ClientOschools'=>$clientOschools]);
-        
+        $clientOschools = ClientOschool::orderby ('nom','asc')->paginate(5);
+        return view('clientOschools.index', ['clientOschools' => $clientOschools]);
+
     }
 
     /**
@@ -26,7 +26,7 @@ class ClientOschoolController extends Controller
      */
     public function create()
     {
-        return view('ClientOschool.create');
+        return view('clientOschools.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class ClientOschoolController extends Controller
      */
     public function store(Request $request)
     {
-      $clientOschool=ClientOschool::create($request->all()); 
+      $clientOschool=ClientOschool::create($request->all());
       return redirect('clientOschools');
     }
 
@@ -49,7 +49,7 @@ class ClientOschoolController extends Controller
      */
     public function show(ClientOschool $clientOschool)
     {
-        return view('ClientOschool.show',['ClientOschool'=>$clientOschool]);
+        return view('clientOschools.show',['ClientOschool'=>$clientOschool]);
     }
 
     /**
@@ -60,7 +60,7 @@ class ClientOschoolController extends Controller
      */
     public function edit(ClientOschool $clientOschool)
     {
-        return view('ClientOschool.edit',['ClientOschool'=>$clientOschool]);
+        return view('clientOschools.edit',['ClientOschool'=>$clientOschool]);
     }
 
     /**

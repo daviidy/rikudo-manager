@@ -1,74 +1,86 @@
-<!DOCTYPE html>
-<html lang="en" >
+@extends('layouts.header')
 
-<head>
-  <meta charset="UTF-8">
-  <title>Formulaire Formateurs</title>
-      <link rel="stylesheet" href="{{asset('css/formulaire.css)}}">
-</head>
-
-<body>
-
-  <hgroup>
-  <h2 style="text-align:center; color:#2486b5;">Inscrire un Formateur</h2>
-</hgroup>
-<form style="width: 800px!important;">
-  <div class="group">
-    <input type="text" class="largeur"><span class="highlight "></span><span class="bar"></span>
-    <label>Nom</label>
-  </div>
-  <div class="group left">
-    <input type="text" class="largeur"><span class="highlight "></span><span class="bar"></span>
-    <label>Prénoms</label>
-  </div>
-  <div class="group">
-    <input type="email" class="largeur"><span class="highlight "></span><span class="bar"></span>
-    <label>Email</label>
-  </div>
-  <div class="group left">
-    <input type="text" class="largeur"><span class="highlight "></span><span class="bar"></span>
-    <label>Nationalité</label>
-  </div>
-  <div class="group">
-    <input type="number" class="largeur"><span class="highlight "></span><span class="bar"></span>
-    <label>Numéro de téléphone</label>
-  </div>
-  <div class="group left">
-    <input type="number" class="largeur"><span class="highlight "></span><span class="bar"></span>
-    <label>Compte paypal</label>
-  </div>
-  <div class="group">
-    <input type="text"><span class="highlight "></span><span class="bar"></span>
-    <label>Date de naissance(ex: jj/mm/aaaa)</label>
-  </div>
-  <div class="group form-group">
-      <label for="sel1" class="marge">Genre:</label>
-      <select class="form-control" id="sel1">
-        <option>M</option>
-        <option>F</option>
-      </select>
-    </div>
-  <div class="group form-group">
-      <label for="sel1" class="marge">Cours enseigné:</label>
-      <select class="form-control" id="sel1">
-        <option>Community Manager</option>
-        <option>Développeur full stack</option>
-        <option>Laboratoire CCNA 200 125 2018</option>
-      </select>
-    </div>
-  <button type="submit" class="button buttonBlue">Envoyer
-    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-  </button>
-</form>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-  
-
-    <script  src="{{asset('js/formulaire js/index.js')}}"></script>
+@section('content')
 
 
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Inscrire un formateur Oschool
+				</span>
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Nom</span>
+					<input class="input100" type="text" name="name" placeholder="Entrer le nom">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Prénoms</span>
+					<input class="input100" type="text" name="name" placeholder="Entrer les prénoms">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<span class="label-input100">Email</span>
+					<input class="input100" type="text" name="email" placeholder="Entrer l'adresse email oschool">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<span class="label-input100">Nationalité</span>
+					<input class="input100" type="text" name="email" placeholder="Entrer la nationalité">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<span class="label-input100">Compte paypal</span>
+					<input class="input100" type="number" name="email" placeholder="Entrer le compte paypal">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Numero is required">
+					<span class="label-input100">Numéro</span>
+					<input class="input100" type="number" name="Numero" placeholder="Entrer le numéro de téléphone">
+					<span class="focus-input100"></span>
+				</div>
+                <div class="wrap-input100 input100-select">
+					<span class="label-input100">Genre</span>
+					<div>
+						<select class="selection-2" name="service">
+							<option>M</option>
+							<option>F</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Cours enseigné</span>
+					<div>
+						<select class="selection-2" name="service">
+							<option>Développement full stack</option>
+							<option>Community Manager</option>
+							<option>Laboratoire Cisco CCNA</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button type="submit" class="contact100-form-btn">
+							<span>
+								Envoyer
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 
 
-</body>
 
-</html>
+	<div id="dropDownSelect1"></div>
+
+	@endsection

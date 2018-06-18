@@ -12,14 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('connexion');
+    return view('auth.login');
 });
-
-
-
-/*Route::get('/','TestController@Accueil');
-
-Route::post('/save','TestController@Save')->name('save_rms');
-
 Route::resource('clientOschools','ClientOschoolController');
-*/
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
