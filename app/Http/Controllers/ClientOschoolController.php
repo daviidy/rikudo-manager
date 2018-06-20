@@ -49,7 +49,7 @@ class ClientOschoolController extends Controller
      */
     public function show(ClientOschool $clientOschool)
     {
-        return view('clientOschools.show',['ClientOschool'=>$clientOschool]);
+        return view('clientOschools.show',['clientOschool' => $clientOschool]);
     }
 
     /**
@@ -60,7 +60,7 @@ class ClientOschoolController extends Controller
      */
     public function edit(ClientOschool $clientOschool)
     {
-        return view('clientOschools.edit',['ClientOschool'=>$clientOschool]);
+        return view('clientOschools.edit',['clientOschool'=> $clientOschool]);
     }
 
     /**

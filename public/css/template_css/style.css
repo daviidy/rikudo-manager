@@ -533,7 +533,7 @@ textarea {
   -webkit-transition: opacity .4s ease-out, visibility 0s linear 0s;
   -o-transition: opacity .4s ease-out, visibility 0s linear 0s;
   transition: opacity .4s ease-out, visibility 0s linear 0s;
-  
+
   opacity: 1; }
 
 #probootstrap-loader .circular {
@@ -593,7 +593,7 @@ textarea {
   color: #4f4f4f !important;
   text-decoration: none !important;
   font-size: 13px !important;
-  
+
 }
 #leftside-navigation ul li a:hover {
   color: #2486b5 !important;
@@ -617,5 +617,3 @@ padding: 6px!important;
 #position{
   margin-right: 0!important;
 }
-
-
