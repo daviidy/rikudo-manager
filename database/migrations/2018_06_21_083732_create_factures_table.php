@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClientRtechesTable extends Migration
+class CreateFacturesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateClientRtechesTable extends Migration
      */
     public function up()
     {
-        Schema::create('client_rteches', function (Blueprint $table) {
+        Schema::create('factures', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nom' , 50);
-            $table->string('prenoms', 150);
-            $table->string('email')->unique();
-            $table->integer('Numero');
+            $table->string('type de paiement');
+            $table->string('montant de paiement');
+            $table->date('date de paiement');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateClientRtechesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('client_rteches');
+        Schema::dropIfExists('factures');
     }
 }

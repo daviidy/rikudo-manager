@@ -15,7 +15,7 @@ class ClientRmController extends Controller
     public function index()
     {
         $clientRms=ClientRm::orderby('nom','asc')->paginate(5);
-        return view('ClientRms.index',['ClientRms'=>$clientRms]);
+        return view('clientRms.index',['clientRms'=>$clientRms]);
     }
 
     /**
@@ -25,7 +25,7 @@ class ClientRmController extends Controller
      */
     public function create()
     {
-        return view('ClientRm.create');
+        return view('clientRms.create');
     }
 
     /**
@@ -48,7 +48,7 @@ class ClientRmController extends Controller
      */
     public function show(ClientRm $clientRm)
     {
-        return view('ClientRm.show',['ClientRm'=>$clientRm]);
+        return view('clientRms.show',['clientRm'=>$clientRm]);
     }
 
     /**
@@ -59,7 +59,7 @@ class ClientRmController extends Controller
      */
     public function edit(ClientRm $clientRm)
     {
-        return view('ClientRm.edit',['ClientRm'=>$clientRm]);
+        return view('clientRms.edit',['clientRm'=>$clientRm]);
     }
 
     /**

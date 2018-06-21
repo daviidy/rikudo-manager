@@ -8,18 +8,9 @@
   <meta name="description" content="Example user profile form and information editing form for Bootstrap 4. This snippet has tabs to separate other profile info such as messages or notifications. Sidebar with profile image.">
   <meta name="google" value="notranslate">
   <link rel="shortcut icon" href="/images/cp_ico.png">
-
-
   <!--stylesheets / link tags loaded here-->
-
-
-
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-
-
   <style type="text/css"></style>
 
   <link rel="stylesheet" type="text/css" href="chrome-extension://immhpnclomdloikkpcefncmfgjbkojmh/css/emoji.css">

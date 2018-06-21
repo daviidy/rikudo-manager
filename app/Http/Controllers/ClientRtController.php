@@ -15,9 +15,8 @@ class ClientRtController extends Controller
     public function index()
     {
         $clientRts=ClientRt::orderby('nom','asc')->paginate(5);
-        return view('ClientRts.index',['ClientRts'=>$clientRts]);
+        return view('clientRts.index',['clientRts'=>$clientRts]);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -25,7 +24,7 @@ class ClientRtController extends Controller
      */
     public function create()
     {
-        return view('ClientRt.create');
+        return view('clientRts.create');
     }
 
     /**
@@ -36,7 +35,7 @@ class ClientRtController extends Controller
      */
     public function store(Request $request)
     {
-        $clientRt=ClientRt::create($request->all());
+        $clientRts=ClientRt::create($request->all());
         return redirect('clientRts');
     }
 
@@ -48,7 +47,7 @@ class ClientRtController extends Controller
      */
     public function show(ClientRt $clientRt)
     {
-        return view('ClientRt.show',['ClientRt'=>$clientRt]);
+        return view('clientRts.show',['clientRt'=>$clientRt]);
     }
 
     /**
@@ -59,14 +58,14 @@ class ClientRtController extends Controller
      */
     public function edit(ClientRt $clientRt)
     {
-        return view('ClientRt.edit',['ClientRt'=>$clientRt]);
+        return view('clientRts.edit',['clientRt'=>$clientRt]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ClientRt  $clientRt
+     * @param  \App\ClientRm  $clientRm
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, ClientRt $clientRt)
@@ -87,3 +86,4 @@ class ClientRtController extends Controller
         return redirect('clientRts');
     }
 }
+

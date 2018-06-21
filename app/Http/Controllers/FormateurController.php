@@ -14,8 +14,8 @@ class FormateurController extends Controller
      */
     public function index()
     {
-        $formateurs=Formateur::orderby ('nom,asc')->paginate(5);
-        return view('Formateurs.index',['Formateurs'=>$formateurs]);
+        $formateurs=Formateur::orderby ('nom','asc')->paginate(5);
+        return view('formateurs.index',['formateurs'=>$formateurs]);
     }
 
     /**
@@ -25,7 +25,7 @@ class FormateurController extends Controller
      */
     public function create()
     {
-        return view('Formateur.create');
+        return view('formateurs.create');
     }
 
     /**
@@ -48,7 +48,7 @@ class FormateurController extends Controller
      */
     public function show(Formateur $formateur)
     {
-        return view('Formateur.show',['Formateur'=>$formateur]);
+        return view('formateurs.show',['formateur'=>$formateur]);
     }
 
     /**
@@ -59,7 +59,7 @@ class FormateurController extends Controller
      */
     public function edit(Formateur $formateur)
     {
-        return view('Formateur.edit',['Formateur'=>$formateur]);
+        return view('formateurs.edit',['formateur'=>$formateur]);
     }
 
     /**
