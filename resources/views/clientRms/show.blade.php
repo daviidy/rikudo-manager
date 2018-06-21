@@ -1,6 +1,6 @@
 @extends('layouts.header-profile')
 
-@section('title', $clientOschool->nom)
+@section('title', $clientRm->nom)
 @section('content')
 
   <div class="container">
@@ -25,13 +25,9 @@
             <h5 class="mb-3">Profil Client</h5>
             <div class="row">
               <div class="col-md-6">
-                <h6>A propos de {{$clientOschool->nom}}</h6>
+                <h6>A propos de {{$clientRm->nom}}</h6>
                 <p>
-                  Etudiant Oschool
-                </p>
-                <h6>Cours suivi</h6>
-                <p>
-                  {{$clientOschool->cours}}
+                  Client Rikudo Média
                 </p>
               </div>
               <div class="col-md-6">
@@ -55,15 +51,10 @@
                   <tbody>
                     <tr>
                       <td>
-                        S'est inscrit à la formation le <strong>{{ $clientOschool->created_at }}</strong>
+                        Est devenu client le <strong>{{ $clientRm->created_at }}</strong>
                       </td>
                     </tr>
-                    <tr>
-                      <td>
-                        A payé <strong>5 000 </strong>FCFA le <strong>`Discussions`</strong>. Il reste
-                        à payer <strong>40 000 </strong> FCFA.
-                      </td>
-                    </tr>
+  
 
                   </tbody>
                 </table>
@@ -105,13 +96,14 @@
               </tbody>
             </table>
           </div>
+          
           <div class="tab-pane" id="factures" aria-expanded="false">
           <form role="form">
               {{ csrf_field() }} {{ method_field('patch') }}
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Type de paiement</label>
                 <div class="col-lg-9">
-                  <select class="form-control" id="sel1" name="type de paiement">
+                  <select class="form-control" id="sel1" name="sellist1">
                     <option>Prestation Rikudo Média</option>
                     <option>Prestation Rikudo Technologies</option>
                     <option>Formation Développement Web</option>
@@ -128,20 +120,19 @@
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Montant de paiement</label>
                 <div class="col-lg-9">
-                  <input name="nom" class="form-control" required name="montant de paiement" type="text">
+                  <input name="nom" class="form-control" type="text">
                 </div>
                </div>
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Date de paiement</label>
                 <div class="col-lg-9">
-                  <input name="nom" class="form-control" required name="date de paiement" type="date">
+                  <input name="nom" class="form-control" type="date">
                 </div>
                </div>
           </form>
           </div>
-          
           <div class="tab-pane active" id="edit" aria-expanded="true">
-            <form role="form" action="{{ url('clientOschools', $clientOschool) }}" method="post">
+            <form role="form" action="{{ url('clientRms', $clientRm) }}" method="post">
               {{ csrf_field() }} {{ method_field('patch') }}
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Nom</label>

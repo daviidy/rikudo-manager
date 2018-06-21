@@ -27,7 +27,7 @@
       <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none"><span class="oi oi-arrow-left"></span> Close</a>
       <div class="probootstrap-site-logo probootstrap-animate" data-animate-effect="fadeInLeft">
 
-        <a href="index.html" class="mb-2 d-block probootstrap-logo">Rikudo Manager</a>
+        <a href="index.html" class="mb-2 d-block probootstrap-logo"><B>Rikudo Manager</B></a>
         <p class="mb-0">Pour gérer les clients de Rikudo SARL</p>
       </div>
       <div class="probootstrap-overflow">
@@ -36,24 +36,13 @@
             <li class="probootstrap-animate active" data-animate-effect="fadeInLeft"><a href="index.html">Accueil</a></li>
             <li class="dropdown">
               <a href="#" data-toggle="dropdown">
-                Catégorie Clients
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Etudiants Oschool</a>
-                <a class="dropdown-item" href="#">Formateurs Oschool</a>
-                <a class="dropdown-item" href="#">Clients R. Technologies</a>
-                <a class="dropdown-item" href="#">Clients R. Media</a>
-              </div>
-            </li>
-            <li class="dropdown">
-              <a href="#" data-toggle="dropdown">
                 Créer un Client
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Etudiants Oschool</a>
-                <a class="dropdown-item" href="#">Formateurs Oschool</a>
-                <a class="dropdown-item" href="#">Clients R. Technologies</a>
-                <a class="dropdown-item" href="#">Clients R. Media</a>
+                <a class="dropdown-item" href="{{ route('clientOschools.create') }}">Etudiants Oschool</a>
+                <a class="dropdown-item" href="{{ route('formateurs.create') }}">Formateurs Oschool</a>
+                <a class="dropdown-item" href="{{ route('clientRts.create') }}">Clients R. Technologies</a>
+                <a class="dropdown-item" href="{{ route('clientRms.create') }}">Clients R. Media</a>
               </div>
             </li>
             <li class="dropdown">
@@ -61,10 +50,10 @@
                 Liste des Clients
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Etudiants Oschool</a>
-                <a class="dropdown-item" href="#">Formateurs Oschool</a>
-                <a class="dropdown-item" href="#">Clients R. Technologies</a>
-                <a class="dropdown-item" href="#">Clients R. Media</a>
+                <a class="dropdown-item" href="{{ route('clientOschools.index') }}">Etudiants Oschool</a>
+                <a class="dropdown-item" href="{{ route('formateurs.index') }}">Formateurs Oschool</a>
+                <a class="dropdown-item" href="{{ route('clientRts.index') }}">Clients R. Technologies</a>
+                <a class="dropdown-item" href="{{ route('clientRms.index') }}">Clients R. Media</a>
               </div>
             </li>
           <!--  <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="contact.html">Contact</a></li> -->

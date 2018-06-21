@@ -316,12 +316,12 @@ h1, h2, h3, h4, h5,
     -webkit-box-shadow: none;
     box-shadow: none; }
   .btn.btn-primary {
-    background: #1FAD9F;
-    border-color: #1FAD9F;
+    background: #2486b5;
+    border-color: #2486b5;
     color: #fff; }
     .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
-      border-color: #178277;
-      background: #178277; }
+      border-color: #2486b5;
+      background: #2486b5; }
   .btn.btn-outline-white {
     border-color: rgba(255, 255, 255, 0.2);
     background: none; }

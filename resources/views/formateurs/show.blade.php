@@ -1,6 +1,6 @@
 @extends('layouts.header-profile')
 
-@section('title', $clientOschool->nom)
+@section('title', $formateur->nom)
 @section('content')
 
   <div class="container">
@@ -16,7 +16,7 @@
           <li class="nav-item">
             <a href="" data-target="#edit" data-toggle="tab" class="nav-link active" aria-expanded="true">Modifier</a>
           </li>
-          <li class="nav-item">
+           <li class="nav-item">
             <a href="" data-target="#factures" data-toggle="tab" class="nav-link" aria-expanded="false">Factures</a>
           </li>
         </ul>
@@ -25,13 +25,13 @@
             <h5 class="mb-3">Profil Client</h5>
             <div class="row">
               <div class="col-md-6">
-                <h6>A propos de {{$clientOschool->nom}}</h6>
+                <h6>A propos de {{$formateur->nom}}</h6>
                 <p>
                   Etudiant Oschool
                 </p>
-                <h6>Cours suivi</h6>
+                <h6>Cours enseigné</h6>
                 <p>
-                  {{$clientOschool->cours}}
+                  {{$formateur->cours}}
                 </p>
               </div>
               <div class="col-md-6">
@@ -55,13 +55,7 @@
                   <tbody>
                     <tr>
                       <td>
-                        S'est inscrit à la formation le <strong>{{ $clientOschool->created_at }}</strong>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        A payé <strong>5 000 </strong>FCFA le <strong>`Discussions`</strong>. Il reste
-                        à payer <strong>40 000 </strong> FCFA.
+                       Est devenu formateur le <strong>{{ $formateur->created_at }}</strong>
                       </td>
                     </tr>
 
@@ -71,6 +65,7 @@
             </div>
             <!--/row-->
           </div>
+
           <div class="tab-pane" id="messages" aria-expanded="false">
             <div class="alert alert-info alert-dismissable">
               <a class="panel-close close" data-dismiss="alert">×</a> This is an <strong>.alert</strong>. Use this to show important messages to the user.
@@ -111,7 +106,7 @@
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Type de paiement</label>
                 <div class="col-lg-9">
-                  <select class="form-control" id="sel1" name="type de paiement">
+                  <select class="form-control" id="sel1" name="sellist1">
                     <option>Prestation Rikudo Média</option>
                     <option>Prestation Rikudo Technologies</option>
                     <option>Formation Développement Web</option>
@@ -128,20 +123,19 @@
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Montant de paiement</label>
                 <div class="col-lg-9">
-                  <input name="nom" class="form-control" required name="montant de paiement" type="text">
+                  <input name="nom" class="form-control" type="text">
                 </div>
                </div>
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Date de paiement</label>
                 <div class="col-lg-9">
-                  <input name="nom" class="form-control" required name="date de paiement" type="date">
+                  <input name="nom" class="form-control" type="date">
                 </div>
                </div>
           </form>
           </div>
-          
           <div class="tab-pane active" id="edit" aria-expanded="true">
-            <form role="form" action="{{ url('clientOschools', $clientOschool) }}" method="post">
+            <form role="form" action="{{ url('formateurs', $formateur) }}" method="post">
               {{ csrf_field() }} {{ method_field('patch') }}
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Nom</label>
