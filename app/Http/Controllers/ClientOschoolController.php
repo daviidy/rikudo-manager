@@ -114,7 +114,7 @@ class ClientOschoolController extends Controller
      * @param  \App\ClientOschool  $clientOschool
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ClientOschool $clientOschool)
+    public function destroy(ClientOschool $clientOschool) 
     {
         $clientOschool->delete();
         return redirect('clientOschools')->with('status', 'Compte supprimé avec succès');;

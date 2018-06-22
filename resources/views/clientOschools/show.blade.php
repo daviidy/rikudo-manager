@@ -203,8 +203,6 @@
           </div>
 
           <div class="tab-pane" id="delete" aria-expanded="false">
-          <form role="form">
-              {{ csrf_field() }}
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">(Attention cette action est irréversible ! )</label>
                 <form action="{{ route('clientOschools.destroy', $clientOschool) }}" method="post">
