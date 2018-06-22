@@ -4,8 +4,6 @@
 
       <!--là ou les photos des etudiants vont apparaitre -->
 
-      <p>{{$clientRts}}</p>
-
       @foreach($clientRts as $clientRt)
 
       <div class="card-columns">

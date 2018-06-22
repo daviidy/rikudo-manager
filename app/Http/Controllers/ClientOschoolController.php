@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\ClientOschool;
+use Image;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class ClientOschoolController extends Controller
@@ -14,6 +16,9 @@ class ClientOschoolController extends Controller
      */
     public function index()
     {
+        if (!Auth::check()) {
+          return redirect('login');
+        }
         $clientOschools = ClientOschool::orderby ('nom','asc')->paginate(5);
         return view('clientOschools.index', ['clientOschools' => $clientOschools]);
 
@@ -26,6 +31,9 @@ class ClientOschoolController extends Controller
      */
     public function create()
     {
+      if (!Auth::check()) {
+        return redirect('login');
+      }
         return view('clientOschools.create');
     }
 
@@ -37,8 +45,17 @@ class ClientOschoolController extends Controller
      */
     public function store(Request $request)
     {
+
       $clientOschool=ClientOschool::create($request->all());
-      return redirect('clientOschools');
+
+      if($request->hasFile('image')){
+        $image = $request->file('image');
+        $filename = time() . '.' . $image->getClientOriginalExtension();
+        Image::make($image)->save(public_path('/img/usersPhotos/' . $filename));
+        $clientOschool->image = $filename;
+        $clientOschool->save();
+    }
+      return redirect('clientOschools')->with('status', 'Compte crée avec succès !');;
     }
 
     /**
@@ -49,6 +66,9 @@ class ClientOschoolController extends Controller
      */
     public function show(ClientOschool $clientOschool)
     {
+      if (!Auth::check()) {
+        return redirect('login');
+      }
         return view('clientOschools.show',['clientOschool' => $clientOschool]);
     }
 
@@ -72,8 +92,20 @@ class ClientOschoolController extends Controller
      */
     public function update(Request $request, ClientOschool $clientOschool)
     {
+
        $clientOschool->update($request->all());
-       return redirect('clientOschools');
+
+       if($request->hasFile('image')){
+
+         $image = $request->file('image');
+         $filename = time() . '.' . $image->getClientOriginalExtension();
+         Image::make($image)->save(public_path('/img/usersPhotos/' . $filename));
+         $clientOschool->image = $filename;
+         $clientOschool->save();
+
+       }
+
+      return redirect('clientOschools')->with('status', 'Modifications enregistrées !');
     }
 
     /**
@@ -82,9 +114,13 @@ class ClientOschoolController extends Controller
      * @param  \App\ClientOschool  $clientOschool
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ClientOschool $clientOschool)
+    public function destroy(ClientOschool $clientOschool) 
     {
         $clientOschool->delete();
-        return redirect('clientOschools');
+        return redirect('clientOschools')->with('status', 'Compte supprimé avec succès');;
     }
+
+
+
+
 }

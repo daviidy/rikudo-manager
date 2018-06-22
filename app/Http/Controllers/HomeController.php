@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ClientOschool;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //auparavant home
+        $clientOschools = ClientOschool::orderby ('nom','asc')->paginate(5);
+        return view('clientOschools.index', ['clientOschools' => $clientOschools]);
+    }
+
+    public function homepage() {
+      if (Auth::check()) {
+        $clientOschools = ClientOschool::orderby ('nom','asc')->paginate(5);
+        return view('clientOschools.index', ['clientOschools' => $clientOschools]);
+      }
+        return view('auth.login');
     }
 }

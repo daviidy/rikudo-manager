@@ -56,6 +56,27 @@
                 <a class="dropdown-item" href="{{ route('clientRms.index') }}">Clients R. Media</a>
               </div>
             </li>
+            @if(Auth::check())
+
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown">
+                    {{ Auth::user()->name }} <span class="caret"></span>
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                        {{ __('Se déconnecter') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+
+            @endif
           <!--  <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="contact.html">Contact</a></li> -->
           </ul>
         </nav>
@@ -72,6 +93,11 @@
 
 
     <main role="main" class="probootstrap-main js-probootstrap-main">
+      @if (session('status'))
+          <div class="alert alert-success">
+              {{ session('status') }}
+          </div>
+      @endif
       <div class="probootstrap-bar">
         <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
         <div class="probootstrap-main-site-logo"><a href="index.html">Rikudo Manager</a></a></div>

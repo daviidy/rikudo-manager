@@ -28,7 +28,7 @@
 				</div>
 				<div class="wrap-input100 validate-input" data-validate="Numero is required">
 					<span class="label-input100">Numéro</span>
-					<input class="input100" type="number" name="Numero" required placeholder="Entrer le numéro de téléphone">
+					<input class="input100" type="string" name="Numero" required placeholder="Entrer le numéro de téléphone">
 					<span class="focus-input100"></span>
 				</div>
 

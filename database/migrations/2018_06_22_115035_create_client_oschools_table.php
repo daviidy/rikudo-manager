@@ -1,4 +1,3 @@
-
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -16,11 +15,12 @@ class CreateClientOschoolsTable extends Migration
     {
         Schema::create('client_oschools', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nom' , 50);
-            $table->string('prenoms', 150);
-            $table->string('email')->unique();
-            $table->integer('numero');
-            $table->text('cours'); 
+            $table->string('nom')->default('dave');
+            $table->string('prenoms')->default('dave');
+            $table->string('email')->unique()->default('exemple@mail.com');
+            $table->string('numero')->default('58450600');
+            $table->string('cours')->default('Cours');
+            $table->string('image')->default('image.jpeg');
             $table->timestamps();
         });
     }
