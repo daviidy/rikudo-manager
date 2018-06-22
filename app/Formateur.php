@@ -8,5 +8,5 @@ class Formateur extends Model
 {
     //
     protected $fillable = ['nom','prenom','nationalité','genre','ComptePaypal',
-                           'DateNaiss','numero','email','cours'];
+                           'DateNaiss','numero','email','cours', 'image'];
 }

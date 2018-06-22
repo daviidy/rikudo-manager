@@ -9,8 +9,8 @@
 				<span class="contact100-form-title">
 					Inscrire un client RikudoMédia
 				</span>
-                 {{ csrf_field() }} 
-     
+                 {{ csrf_field() }}
+
 				<div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Nom</span>
 					<input class="input100" type="text" name="nom" required placeholder="Entrer le nom">
@@ -29,7 +29,7 @@
 				</div>
 				<div class="wrap-input100 validate-input" data-validate="Numero is required">
 					<span class="label-input100">Numéro</span>
-					<input class="input100" type="number" name="Numero" required placeholder="Entrer le numéro de téléphone">
+					<input class="input100" type="string" name="Numero" required placeholder="Entrer le numéro de téléphone">
 					<span class="focus-input100"></span>
 				</div>
 

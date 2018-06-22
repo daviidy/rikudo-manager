@@ -4,7 +4,6 @@
 
       <!--là ou les photos des etudiants vont apparaitre -->
 
-      <p>{{$clientRms}}</p>
 
       @foreach($clientRms as $clientRm)
 

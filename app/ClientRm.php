@@ -8,6 +8,6 @@ class ClientRm extends Model
 {
 
     // definir le nom des champs
-    protected $fillable = ['nom','prenoms','email','Numero'];
+    protected $fillable = ['nom','prenoms','email','numero', 'image'];
 
 }

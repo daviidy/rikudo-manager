@@ -4,8 +4,6 @@
 
       <!--là ou les photos des etudiants vont apparaitre -->
 
-      <p>{{$formateurs}}</p>
-
       @foreach($formateurs as $formateur)
 
       <div class="card-columns">
