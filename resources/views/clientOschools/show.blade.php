@@ -3,7 +3,7 @@
 @section('title', $clientOschool->nom)
 @section('content')
 
-  <div class="container">
+  <div class="container"> 
     <div class="row my-2">
       <div class="col-lg-8 order-lg-2">
         <ul class="nav nav-tabs">
@@ -168,37 +168,49 @@
           </div>
 
           <div class="tab-pane" id="factures" aria-expanded="false">
-          <form role="form">
+          <form action="{{ route('factureOschools.store') }}" method="post" role="form">
               {{ csrf_field() }}
+
               <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Type de paiement</label>
+                <label class="col-lg-3 col-form-label form-control-label">Nom de l'étudiant</label>
                 <div class="col-lg-9">
-                  <select class="form-control" id="sel1" name="type de paiement">
-                    <option>Prestation Rikudo Média</option>
-                    <option>Prestation Rikudo Technologies</option>
+                  <select name="clientOschool_id" class="form-control" style="">
+                    <option value="{{ $clientOschool->id }}">{{ $clientOschool->nom }}</option>
+                  </select>
+                </div>
+               </div>
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Cours</label>
+                <div class="col-lg-9">
+                  <select class="form-control" name="type_de_paiement">
                     <option>Formation Développement Web</option>
                     <option>Formation Jeu Vidéo</option>
                     <option>Formation Design</option>
                     <option>Formation Montage vidéo</option>
                     <option>Formation Community Manager</option>
-                    <option>Management Digital</option>
-                    <option>Montorat OpenClassrooms</option>
-                    <option>Cours Udemy</option>
+                    <option>Marketing Digital</option>
                  </select>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Montant de paiement</label>
                 <div class="col-lg-9">
-                  <input name="nom" class="form-control" required name="montant de paiement" type="text">
+                  <input class="form-control" required name="montant_de_paiement" type="text">
                 </div>
                </div>
                <div class="form-group row">
+                 <label class="col-lg-3 col-form-label form-control-label">Reste à payer</label>
+                 <div class="col-lg-9">
+                   <input class="form-control" required name="reste" type="text">
+                 </div>
+                </div>
+               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Date de paiement</label>
                 <div class="col-lg-9">
-                  <input name="nom" class="form-control" required name="date de paiement" type="date">
+                  <input class="form-control" required name="date_de_paiement" type="date">
                 </div>
                </div>
+               <button class="pull-right btn btn-primary" type="submit">Créer facture</button>
           </form>
           </div>
 

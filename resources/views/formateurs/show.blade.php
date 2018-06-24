@@ -117,7 +117,7 @@
                     <option>Management Digital</option>
                     <option>Montorat OpenClassrooms</option>
                     <option>Cours Udemy</option>
-                 </select>                
+                 </select>
                 </div>
               </div>
               <div class="form-group row">
@@ -136,7 +136,8 @@
           </div>
           <div class="tab-pane active" id="edit" aria-expanded="true">
             <form role="form" action="{{ url('formateurs', $formateur) }}" method="post">
-              {{ csrf_field() }} {{ method_field('patch') }}
+              {{ csrf_field() }}
+              {{ method_field('patch') }}
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Nom</label>
                 <div class="col-lg-9">

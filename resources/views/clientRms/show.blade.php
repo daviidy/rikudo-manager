@@ -8,26 +8,36 @@
       <div class="col-lg-8 order-lg-2">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a href="" data-target="#profile" data-toggle="tab" class="nav-link" aria-expanded="false">Profile</a>
+            <a href="/" class="nav-link" aria-expanded="false">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a href="" data-target="#profile" data-toggle="tab" class="nav-link active" aria-expanded="false">Profil</a>
           </li>
           <li class="nav-item">
             <a href="" data-target="#messages" data-toggle="tab" class="nav-link" aria-expanded="false">Messages</a>
           </li>
           <li class="nav-item">
-            <a href="" data-target="#edit" data-toggle="tab" class="nav-link active" aria-expanded="true">Modifier</a>
+            <a href="" data-target="#edit" data-toggle="tab" class="nav-link" aria-expanded="true">Modifier</a>
           </li>
           <li class="nav-item">
             <a href="" data-target="#factures" data-toggle="tab" class="nav-link" aria-expanded="false">Factures</a>
           </li>
+          <li class="nav-item">
+            <a href="" data-target="#delete" data-toggle="tab" class="nav-link" aria-expanded="false">Supprimer</a>
+          </li>
         </ul>
         <div class="tab-content py-4">
-          <div class="tab-pane" id="profile" aria-expanded="false">
+          <div class="tab-pane active" id="profile" aria-expanded="false">
             <h5 class="mb-3">Profil Client</h5>
             <div class="row">
               <div class="col-md-6">
                 <h6>A propos de {{$clientRm->nom}}</h6>
                 <p>
                   Client Rikudo Média
+                </p>
+                <h6>Email</h6>
+                <p>
+                  {{$clientRm->email}}
                 </p>
               </div>
               <div class="col-md-6">
@@ -51,10 +61,10 @@
                   <tbody>
                     <tr>
                       <td>
-                        Est devenu client le <strong>{{ $clientRm->created_at }}</strong>
+                        A payé <strong>5 000 </strong>FCFA le <strong>`Discussions`</strong>. Il reste
+                        à payer <strong>40 000 </strong> FCFA.
                       </td>
                     </tr>
-  
 
                   </tbody>
                 </table>
@@ -96,140 +106,121 @@
               </tbody>
             </table>
           </div>
-          
-          <div class="tab-pane" id="factures" aria-expanded="false">
-          <form role="form">
-              {{ csrf_field() }} {{ method_field('patch') }}
-              <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Type de paiement</label>
-                <div class="col-lg-9">
-                  <select class="form-control" id="sel1" name="sellist1">
-                    <option>Prestation Rikudo Média</option>
-                    <option>Prestation Rikudo Technologies</option>
-                    <option>Formation Développement Web</option>
-                    <option>Formation Jeu Vidéo</option>
-                    <option>Formation Design</option>
-                    <option>Formation Montage vidéo</option>
-                    <option>Formation Community Manager</option>
-                    <option>Management Digital</option>
-                    <option>Montorat OpenClassrooms</option>
-                    <option>Cours Udemy</option>
-                 </select>                
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Montant de paiement</label>
-                <div class="col-lg-9">
-                  <input name="nom" class="form-control" type="text">
-                </div>
-               </div>
-              <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Date de paiement</label>
-                <div class="col-lg-9">
-                  <input name="nom" class="form-control" type="date">
-                </div>
-               </div>
-          </form>
-          </div>
-          <div class="tab-pane active" id="edit" aria-expanded="true">
-            <form role="form" action="{{ url('clientRms', $clientRm) }}" method="post">
-              {{ csrf_field() }} {{ method_field('patch') }}
+
+
+          <div class="tab-pane" id="edit" aria-expanded="true">
+            <form enctype="multipart/form-data" role="form" action="{{ url('clientRms', $clientRm) }}" method="post">
+              {{ csrf_field() }}
+              {{ method_field('patch') }}
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Nom</label>
                 <div class="col-lg-9">
-                  <input name="nom" class="form-control" type="text" value="Jane">
+                  <input name="nom" class="form-control" type="text" value="{{$clientRm->nom}}">
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Prénoms</label>
                 <div class="col-lg-9">
-                  <input name="prenoms" class="form-control" type="text" value="Bishop">
+                  <input name="prenoms" class="form-control" type="text" value="{{$clientRm->prenoms}}">
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Email Oschool</label>
+                <label class="col-lg-3 col-form-label form-control-label">Email</label>
                 <div class="col-lg-9">
-                  <input class="form-control" name="email" type="email">
+                  <input class="form-control" name="email" type="text" value="{{$clientRm->email}}">
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Cours</label>
+                <label class="col-lg-3 col-form-label form-control-label">Numéro</label>
                 <div class="col-lg-9">
-                  <input class="form-control" type="text" value="" name="cours">
+                  <input class="form-control" type="text" value="{{$clientRm->numero}}" name="Numero">
                 </div>
               </div>
+
               <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Website</label>
+                <label class="col-lg-3 col-form-label form-control-label">Photo</label>
                 <div class="col-lg-9">
-                  <input class="form-control" type="url" value="">
+                  <input type="file" name="image">
                 </div>
               </div>
-              <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Adresse</label>
-                <div class="col-lg-9">
-                  <input class="form-control" type="text" value="" placeholder="Street">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label"></label>
-                <div class="col-lg-6">
-                  <input class="form-control" type="text" value="" placeholder="City">
-                </div>
-                <div class="col-lg-3">
-                  <input class="form-control" type="text" value="" placeholder="State">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Time Zone</label>
-                <div class="col-lg-9">
-                  <select id="user_time_zone" class="form-control" size="0">
-                                    <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                                    <option value="Alaska">(GMT-09:00) Alaska</option>
-                                    <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
-                                    <option value="Arizona">(GMT-07:00) Arizona</option>
-                                    <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
-                                    <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
-                                    <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
-                                    <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
-                                </select>
-                </div>
-              </div>
-              <!--    <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Username</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="text" value="janeuser">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Password</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="password" value="11111122333">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Confirm password</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="password" value="11111122333">
-                            </div>
-                        </div> -->
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label"></label>
                 <div class="col-lg-9">
                   <input type="reset" class="btn btn-secondary" value="Annuler">
-                  <input type="button" class="btn btn-primary" value="Enregistrer les modifications">
+                  <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
                 </div>
               </div>
             </form>
           </div>
+
+          <div class="tab-pane" id="factures" aria-expanded="false">
+          <form action="{{ route('factureRms.store') }}" method="post" role="form">
+              {{ csrf_field() }}
+
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Nom de l'étudiant</label>
+                <div class="col-lg-9">
+                  <select name="clientRm_id" class="form-control" style="">
+                    <option value="{{ $clientRm->id }}">{{ $clientRm->nom }}</option>
+                  </select>
+                </div>
+               </div>
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Cours</label>
+                <div class="col-lg-9">
+                  <select class="form-control" name="type_de_paiement">
+                    <option>Formation Développement Web</option>
+                    <option>Formation Jeu Vidéo</option>
+                    <option>Formation Design</option>
+                    <option>Formation Montage vidéo</option>
+                    <option>Formation Community Manager</option>
+                    <option>Marketing Digital</option>
+                 </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Montant de paiement</label>
+                <div class="col-lg-9">
+                  <input class="form-control" required name="montant_de_paiement" type="text">
+                </div>
+               </div>
+               <div class="form-group row">
+                 <label class="col-lg-3 col-form-label form-control-label">Reste à payer</label>
+                 <div class="col-lg-9">
+                   <input class="form-control" required name="reste" type="text">
+                 </div>
+                </div>
+               <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Date de paiement</label>
+                <div class="col-lg-9">
+                  <input class="form-control" required name="date_de_paiement" type="date">
+                </div>
+               </div>
+               <button class="pull-right btn btn-primary" type="submit">Créer facture</button>
+          </form>
+          </div>
+
+          <div class="tab-pane" id="delete" aria-expanded="false">
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">(Attention cette action est irréversible ! )</label>
+                <form action="{{ route('clientRms.destroy', $clientRm) }}" method="post">
+                    {{ csrf_field() }}
+                    {{ method_field('delete') }}
+                    <button class="btn btn-danger" type="submit">Supprimer ce compte étudiant</button>
+                </form>
+
+              </div>
+
+
+          </form>
+          </div>
+
+
+
         </div>
       </div>
       <div class="col-lg-4 order-lg-1 text-center">
-        <img src="/img/shoes.jpg" class="mx-auto img-fluid img-circle d-block" alt="avatar">
-        <h6 class="mt-2">Changer photo</h6>
-        <label class="custom-file">
-          <input type="file" id="file" class="custom-file-input">
-          <span class="custom-file-control">Choisir fichier</span>
-        </label>
+        <img src="/img/usersPhotos/{{ $clientRm->image }}" class="mx-auto img-fluid img-circle d-block" alt="avatar">
       </div>
     </div>
   </div>

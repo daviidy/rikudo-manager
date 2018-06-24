@@ -55,7 +55,7 @@ class ClientOschoolController extends Controller
         $clientOschool->image = $filename;
         $clientOschool->save();
     }
-      return redirect('clientOschools')->with('status', 'Compte crée avec succès !');;
+      return redirect('clientOschools')->with('status', 'Compte crée avec succès !');
     }
 
     /**
@@ -105,7 +105,7 @@ class ClientOschoolController extends Controller
 
        }
 
-      return redirect('clientOschools')->with('status', 'Modifications enregistrées !');
+      return back()->with('status', 'Modification enregistrées');
     }
 
     /**
@@ -114,7 +114,7 @@ class ClientOschoolController extends Controller
      * @param  \App\ClientOschool  $clientOschool
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ClientOschool $clientOschool) 
+    public function destroy(ClientOschool $clientOschool)
     {
         $clientOschool->delete();
         return redirect('clientOschools')->with('status', 'Compte supprimé avec succès');;

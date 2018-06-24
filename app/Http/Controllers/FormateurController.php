@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Formateur;
+use Image;
 use Illuminate\Http\Request;
 
 class FormateurController extends Controller
@@ -37,7 +38,14 @@ class FormateurController extends Controller
     public function store(Request $request)
     {
         $formateur=Formateur::create($request->all());
-        return redirect('formateurs');
+        if($request->hasFile('image')){
+          $image = $request->file('image');
+          $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/img/usersPhotos/' . $filename));
+          $clientOschool->image = $filename;
+          $clientOschool->save();
+      }
+        return redirect('formateurs')->with('status', 'Compte crée avec succès !');
     }
 
     /**
@@ -72,7 +80,17 @@ class FormateurController extends Controller
     public function update(Request $request, Formateur $formateur)
     {
         $formateur->update($request->all());
-        return redirect('formateurs');
+        if($request->hasFile('image')){
+
+          $image = $request->file('image');
+          $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/img/usersPhotos/' . $filename));
+          $clientOschool->image = $filename;
+          $clientOschool->save();
+
+        }
+
+       return back()->with('status', 'Modification enregistrées');
     }
 
     /**

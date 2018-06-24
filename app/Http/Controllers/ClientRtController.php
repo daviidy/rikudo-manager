@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ClientRt;
+use Image;
 use Illuminate\Http\Request;
 
 class ClientRtController extends Controller
@@ -36,7 +37,14 @@ class ClientRtController extends Controller
     public function store(Request $request)
     {
         $clientRts=ClientRt::create($request->all());
-        return redirect('clientRts');
+        if($request->hasFile('image')){
+          $image = $request->file('image');
+          $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/img/usersPhotos/' . $filename));
+          $clientOschool->image = $filename;
+          $clientOschool->save();
+      }
+        return redirect('clientRts')->with('status', 'Compte crée avec succès !');
     }
 
     /**
@@ -71,7 +79,17 @@ class ClientRtController extends Controller
     public function update(Request $request, ClientRt $clientRt)
     {
         $clientRt->update($request->all());
-        return redirect('clientRts');
+        if($request->hasFile('image')){
+
+          $image = $request->file('image');
+          $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/img/usersPhotos/' . $filename));
+          $clientOschool->image = $filename;
+          $clientOschool->save();
+
+        }
+
+       return back()->with('status', 'Modification enregistrées');
     }
 
     /**
@@ -86,4 +104,3 @@ class ClientRtController extends Controller
         return redirect('clientRts');
     }
 }
-

@@ -17,6 +17,10 @@
 Route::get('/', 'HomeController@homepage');
 Route::resource('clientOschools','ClientOschoolController');
 
+Route::resource('factureOschools','FactureOschoolController');
+Route::resource('factureRts','FactureRtController');
+Route::resource('factureRms','FactureRmController');
+
 
 
 Auth::routes();
