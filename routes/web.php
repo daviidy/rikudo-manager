@@ -20,6 +20,12 @@ Route::resource('clientOschools','ClientOschoolController');
 Route::resource('factureOschools','FactureOschoolController');
 Route::resource('factureRts','FactureRtController');
 Route::resource('factureRms','FactureRmController');
+Route::resource('factureBootcamps','FactureBootcampController');
+Route::resource('factureSoutenances','FactureSoutenanceController');
+
+Route::resource('clientBootcamps','ClientBootcampController');
+Route::resource('clientSoutenances','ClientSoutenanceController');
+
 
 
 
