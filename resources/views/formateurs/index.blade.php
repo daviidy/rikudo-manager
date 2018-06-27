@@ -3,10 +3,10 @@
 @section('content')
 
       <!--là ou les photos des etudiants vont apparaitre -->
-
+      <div class="card-columns">
       @foreach($formateurs as $formateur)
 
-      <div class="card-columns">
+
         <div class="card">
           <a href="#">
           <img class="card-img-top probootstrap-animate" src="/img/shoes.jpg" alt="Card image cap">
@@ -18,9 +18,11 @@
             <a href="{{ route('formateurs.show', $formateur) }}" class="btn btn-primary">Voir profile</a>
           </div>
         </div>
-      </div>
+
 
       @endforeach
+      </div>
+      {{ $formateurs->links() }}
 
 
   @endsection

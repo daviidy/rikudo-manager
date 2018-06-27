@@ -19,7 +19,7 @@ class ClientBootcampController extends Controller
       if (!Auth::check()) {
         return redirect('login');
       }
-      $clientBootcamps = ClientBootcamp::orderby ('nom','asc')->paginate(5);
+      $clientBootcamps = ClientBootcamp::orderby ('nom','asc')->paginate(30);
       return view('clientBootcamps.index', ['clientBootcamps' => $clientBootcamps]);
     }
 

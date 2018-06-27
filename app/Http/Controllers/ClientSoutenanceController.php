@@ -19,7 +19,7 @@ class ClientSoutenanceController extends Controller
       if (!Auth::check()) {
         return redirect('login');
       }
-      $clientSoutenances = ClientSoutenance::orderby ('nom','asc')->paginate(5);
+      $clientSoutenances = ClientSoutenance::orderby ('nom','asc')->paginate(30);
       return view('clientSoutenances.index', ['clientSoutenances' => $clientSoutenances]);
     }
 

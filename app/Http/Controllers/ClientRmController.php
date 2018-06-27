@@ -15,7 +15,7 @@ class ClientRmController extends Controller
      */
     public function index()
     {
-        $clientRms=ClientRm::orderby('nom','asc')->paginate(5);
+        $clientRms=ClientRm::orderby('nom','asc')->paginate(30);
         return view('clientRms.index',['clientRms'=>$clientRms]);
     }
 

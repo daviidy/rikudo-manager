@@ -19,7 +19,7 @@ class ClientOschoolController extends Controller
         if (!Auth::check()) {
           return redirect('login');
         }
-        $clientOschools = ClientOschool::orderby ('nom','asc')->paginate(5);
+        $clientOschools = ClientOschool::orderby ('nom','asc')->paginate(30);
         return view('clientOschools.index', ['clientOschools' => $clientOschools]);
 
     }

@@ -4,10 +4,11 @@
 
       <!--là ou les photos des etudiants vont apparaitre -->
 
+<div class="card-columns">
 
       @foreach($clientOschools as $clientOschool)
 
-      <div class="card-columns">
+
         <div class="card">
           <a href="#">
           <img class="card-img-top probootstrap-animate" src="/img/usersPhotos/{{$clientOschool->image}}" alt="Photo de l'étudiant">
@@ -19,9 +20,13 @@
             <a href="{{ route('clientOschools.show', $clientOschool) }}" class="btn btn-primary">Voir profil</a>
           </div>
         </div>
-      </div>
+
 
       @endforeach
+
+</div>
+
+{{ $clientOschools->links() }}
 
 
   @endsection

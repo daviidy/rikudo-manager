@@ -15,7 +15,7 @@ class ClientRtController extends Controller
      */
     public function index()
     {
-        $clientRts=ClientRt::orderby('nom','asc')->paginate(5);
+        $clientRts=ClientRt::orderby('nom','asc')->paginate(30);
         return view('clientRts.index',['clientRts'=>$clientRts]);
     }
     /**

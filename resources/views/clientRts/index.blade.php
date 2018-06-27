@@ -4,9 +4,10 @@
 
       <!--là ou les photos des etudiants vont apparaitre -->
 
+      <div class="card-columns">
       @foreach($clientRts as $clientRt)
 
-      <div class="card-columns">
+
         <div class="card">
           <a href="#">
           <img class="card-img-top probootstrap-animate" src="/img/shoes.jpg" alt="Card image cap">
@@ -17,9 +18,11 @@
             <a href="{{ route('clientRts.show', $clientRt) }}" class="btn btn-primary">Voir profile</a>
           </div>
         </div>
-      </div>
+
 
       @endforeach
+      </div>
+      {{ $clientRts->links() }}
 
 
   @endsection

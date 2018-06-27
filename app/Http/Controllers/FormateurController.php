@@ -15,7 +15,7 @@ class FormateurController extends Controller
      */
     public function index()
     {
-        $formateurs=Formateur::orderby ('nom','asc')->paginate(5);
+        $formateurs=Formateur::orderby ('nom','asc')->paginate(30);
         return view('formateurs.index',['formateurs'=>$formateurs]);
     }
 

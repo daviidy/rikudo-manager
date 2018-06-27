@@ -4,10 +4,11 @@
 
       <!--là ou les photos des etudiants vont apparaitre -->
 
+      <div class="card-columns">
 
       @foreach($clientBootcamps as $clientBootcamp)
 
-      <div class="card-columns">
+
         <div class="card">
           <a href="#">
           <img class="card-img-top probootstrap-animate" src="/img/usersPhotos/{{$clientBootcamp->image}}" alt="Photo de l'étudiant">
@@ -19,9 +20,12 @@
             <a href="{{ route('clientBootcamps.show', $clientBootcamp) }}" class="btn btn-primary">Voir profil</a>
           </div>
         </div>
-      </div>
+
 
       @endforeach
+
+      </div>
+      {{ $clientBootcamps->links() }}
 
 
   @endsection
