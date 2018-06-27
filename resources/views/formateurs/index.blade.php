@@ -21,7 +21,7 @@
 
 
       @endforeach
-      </div>
+      </div> 
       {{ $formateurs->links() }}
 
 
