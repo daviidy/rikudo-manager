@@ -10,7 +10,7 @@
 
         <div class="card">
           <a href="#">
-          <img class="card-img-top probootstrap-animate" src="/img/shoes.jpg" alt="Card image cap">
+          <img class="card-img-top probootstrap-animate" src="/img/usersPhotos/{{$clientRt->image}}" alt="Card image cap">
           </a>
           <div class="card-body">
             <h4 class="card-title">{{ $clientRt->nom }}</h4>

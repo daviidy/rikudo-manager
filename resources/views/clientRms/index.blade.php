@@ -11,7 +11,7 @@
 
         <div class="card">
           <a href="#">
-          <img class="card-img-top probootstrap-animate" src="/img/shoes.jpg" alt="Card image cap">
+          <img class="card-img-top probootstrap-animate" src="/img/usersPhotos/{{$clientRm->image}}" alt="Card image cap">
           </a>
           <div class="card-body">
             <h4 class="card-title">{{ $clientRm->nom }}</h4>

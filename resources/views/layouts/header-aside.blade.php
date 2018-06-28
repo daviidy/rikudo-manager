@@ -86,7 +86,7 @@
             <li><a target="_blank" href="#" class="p-2"><span class="icon-instagram"></span></a></li>
             <li><a target="_blank" href="#" class="p-2"><span class="icon-facebook"></span></a></li>
           </ul>
-          <p>&copy; 2017 <a href="https://rikudotech.com/" target="_blank">Rikudo Technologies</a>. <br>Tous droits réservés.</p>
+          <p>&copy; 2018 <a href="http://rikudotech.com/" target="_blank">Rikudo Technologies</a>. <br>Tous droits réservés.</p>
         </footer>
       </div>
     </aside>
