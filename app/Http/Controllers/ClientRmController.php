@@ -37,13 +37,13 @@ class ClientRmController extends Controller
      */
     public function store(Request $request)
     {
-        $clientRms=ClientRm::create($request->all());
+        $clientRm=ClientRm::create($request->all());
         if($request->hasFile('image')){
           $image = $request->file('image');
           $filename = time() . '.' . $image->getClientOriginalExtension();
           Image::make($image)->save(public_path('/img/usersPhotos/' . $filename));
-          $clientOschool->image = $filename;
-          $clientOschool->save();
+          $clientRm->image = $filename;
+          $clientRm->save();
       }
         return redirect('clientRms')->with('status', 'Compte crée avec succès !');
     }
@@ -85,8 +85,8 @@ class ClientRmController extends Controller
           $image = $request->file('image');
           $filename = time() . '.' . $image->getClientOriginalExtension();
           Image::make($image)->save(public_path('/img/usersPhotos/' . $filename));
-          $clientOschool->image = $filename;
-          $clientOschool->save();
+          $clientRm->image = $filename;
+          $clientRm->save();
 
         }
 

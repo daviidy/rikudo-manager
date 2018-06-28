@@ -42,8 +42,8 @@ class FormateurController extends Controller
           $image = $request->file('image');
           $filename = time() . '.' . $image->getClientOriginalExtension();
           Image::make($image)->save(public_path('/img/usersPhotos/' . $filename));
-          $clientOschool->image = $filename;
-          $clientOschool->save();
+          $formateur->image = $filename;
+          $formateur->save();
       }
         return redirect('formateurs')->with('status', 'Compte crée avec succès !');
     }
@@ -85,8 +85,8 @@ class FormateurController extends Controller
           $image = $request->file('image');
           $filename = time() . '.' . $image->getClientOriginalExtension();
           Image::make($image)->save(public_path('/img/usersPhotos/' . $filename));
-          $clientOschool->image = $filename;
-          $clientOschool->save();
+          $formateur->image = $filename;
+          $formateur->save();
 
         }
 

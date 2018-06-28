@@ -166,19 +166,6 @@
                 </div>
                </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Cours</label>
-                <div class="col-lg-9">
-                  <select class="form-control" name="type_de_paiement">
-                    <option>Formation Développement Web</option>
-                    <option>Formation Jeu Vidéo</option>
-                    <option>Formation Design</option>
-                    <option>Formation Montage vidéo</option>
-                    <option>Formation Community Manager</option>
-                    <option>Marketing Digital</option>
-                 </select>
-                </div>
-              </div>
-              <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Montant de paiement</label>
                 <div class="col-lg-9">
                   <input class="form-control" required name="montant_de_paiement" type="text">
