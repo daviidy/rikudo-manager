@@ -39,6 +39,10 @@
                 <p>
                   {{$clientBootcamp->theme}}
                 </p>
+                <h6>Numéro</h6>
+                <p>
+                  {{$clientBootcamp->numero}}
+                </p>
               </div>
               <div class="col-md-6">
                 <h6>Recent badges</h6>
@@ -181,7 +185,7 @@
                   </select>
                 </div>
                </div>
-              
+
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Montant de paiement</label>
                 <div class="col-lg-9">

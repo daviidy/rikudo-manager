@@ -33,6 +33,10 @@
                 <p>
                   {{$formateur->cours}}
                 </p>
+                <h6>Numéro</h6>
+                <p>
+                  {{$formateur->numero}}
+                </p>
               </div>
               <div class="col-md-6">
                 <h6>Recent badges</h6>
@@ -107,16 +111,12 @@
                 <label class="col-lg-3 col-form-label form-control-label">Type de paiement</label>
                 <div class="col-lg-9">
                   <select class="form-control" id="sel1" name="sellist1">
-                    <option>Prestation Rikudo Média</option>
-                    <option>Prestation Rikudo Technologies</option>
                     <option>Formation Développement Web</option>
                     <option>Formation Jeu Vidéo</option>
                     <option>Formation Design</option>
                     <option>Formation Montage vidéo</option>
                     <option>Formation Community Manager</option>
-                    <option>Management Digital</option>
-                    <option>Montorat OpenClassrooms</option>
-                    <option>Cours Udemy</option>
+                    <option>Marketing Digital</option>
                  </select>
                 </div>
               </div>
@@ -147,56 +147,38 @@
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Prénoms</label>
                 <div class="col-lg-9">
-                  <input name="prenoms" class="form-control" type="text" value="Bishop">
+                  <input name="prenom" class="form-control" type="text" value="Bishop">
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Email Oschool</label>
+                <label class="col-lg-3 col-form-label form-control-label">ComptePaypal</label>
                 <div class="col-lg-9">
-                  <input class="form-control" name="email" type="email">
+                  <input class="form-control" name="ComptePaypal" type="text">
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Cours</label>
+                <label class="col-lg-3 col-form-label form-control-label">Numéro</label>
                 <div class="col-lg-9">
-                  <input class="form-control" type="text" value="" name="cours">
+                  <input class="form-control" type="text" value="" name="numero">
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Website</label>
+                <label class="col-lg-3 col-form-label form-control-label">Email</label>
                 <div class="col-lg-9">
                   <input class="form-control" type="url" value="">
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Adresse</label>
-                <div class="col-lg-9">
-                  <input class="form-control" type="text" value="" placeholder="Street">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label"></label>
-                <div class="col-lg-6">
-                  <input class="form-control" type="text" value="" placeholder="City">
-                </div>
-                <div class="col-lg-3">
-                  <input class="form-control" type="text" value="" placeholder="State">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Time Zone</label>
-                <div class="col-lg-9">
-                  <select id="user_time_zone" class="form-control" size="0">
-                                    <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                                    <option value="Alaska">(GMT-09:00) Alaska</option>
-                                    <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
-                                    <option value="Arizona">(GMT-07:00) Arizona</option>
-                                    <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
-                                    <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
-                                    <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
-                                    <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
-                                </select>
-                </div>
+                <label class="col-lg-3 col-form-label form-control-label">Cours enseigné</label>
+                <div>
+      						<select class="selection-2" name="cours">
+      							<option>Développement full stack</option>
+      							<option>Community Manager</option>
+      							<option>Laboratoire Cisco CCNA</option>
+                    <option>Comment installer Unity et coder son jeu ?</option>
+      							<option>Booster son business avec Facebook</option>
+      						</select>
+      					</div>
               </div>
               <!--    <div class="form-group row">
                             <label class="col-lg-3 col-form-label form-control-label">Username</label>
@@ -220,7 +202,7 @@
                 <label class="col-lg-3 col-form-label form-control-label"></label>
                 <div class="col-lg-9">
                   <input type="reset" class="btn btn-secondary" value="Annuler">
-                  <input type="button" class="btn btn-primary" value="Enregistrer les modifications">
+                  <input type="submit" class="btn btn-primary" value="Enregistrer les modifications">
                 </div>
               </div>
             </form>

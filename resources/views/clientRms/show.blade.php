@@ -39,6 +39,10 @@
                 <p>
                   {{$clientRm->email}}
                 </p>
+                <h6>Numéro</h6>
+                <p>
+                  {{$clientRm->numero}}
+                </p>
               </div>
               <div class="col-md-6">
                 <h6>Recent badges</h6>

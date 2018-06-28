@@ -46,6 +46,8 @@
 							<option>Développement full stack</option>
 							<option>Community Manager</option>
 							<option>Laboratoire Cisco CCNA</option>
+							<option>Comment installer Unity et coder son jeu ?</option>
+							<option>Booster son business avec Facebook</option>
 						</select>
 					</div>
 					<span class="focus-input100"></span>

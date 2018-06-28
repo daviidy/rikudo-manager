@@ -3,7 +3,7 @@
 @section('title', $clientOschool->nom)
 @section('content')
 
-  <div class="container"> 
+  <div class="container">
     <div class="row my-2">
       <div class="col-lg-8 order-lg-2">
         <ul class="nav nav-tabs">
@@ -38,6 +38,10 @@
                 <h6>Cours suivi</h6>
                 <p>
                   {{$clientOschool->cours}}
+                </p>
+                <h6>Numéro</h6>
+                <p>
+                  {{$clientOschool->numero}}
                 </p>
               </div>
               <div class="col-md-6">
@@ -148,6 +152,8 @@
       							<option>Développement full stack</option>
       							<option>Community Manager</option>
       							<option>Laboratoire Cisco CCNA</option>
+                    <option>Comment installer Unity et coder son jeu ?</option>
+      							<option>Booster son business avec Facebook</option>
       						</select>
       					</div>
               </div>

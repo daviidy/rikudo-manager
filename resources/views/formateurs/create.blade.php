@@ -37,7 +37,7 @@
 				</div>
 				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 					<span class="label-input100">Compte paypal</span>
-					<input class="input100" type="number" name="ComptePaypal" required placeholder="Entrer le compte paypal">
+					<input class="input100" type="text" name="ComptePaypal" required placeholder="Entrer le compte paypal">
 					<span class="focus-input100"></span>
 				</div>
 				<div class="wrap-input100 validate-input" data-validate="Numero is required">
@@ -49,8 +49,8 @@
 					<span class="label-input100">Genre</span>
 					<div>
 						<select class="selection-2" name="genre">
-							<option>M</option>
-							<option>F</option>
+							<option>Masculin</option>
+							<option>Féminin</option>
 						</select>
 					</div>
 					<span class="focus-input100"></span>
@@ -63,6 +63,8 @@
 							<option>Développement full stack</option>
 							<option>Community Manager</option>
 							<option>Laboratoire Cisco CCNA</option>
+							<option>Comment installer Unity et coder son jeu ?</option>
+							<option>Booster son business avec Facebook</option>
 						</select>
 					</div>
 					<span class="focus-input100"></span>
