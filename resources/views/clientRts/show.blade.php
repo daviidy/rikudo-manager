@@ -74,13 +74,13 @@
           </div>
           <div class="tab-pane" id="messages" aria-expanded="false">
             <div class="alert alert-info alert-dismissable">
-              <a class="panel-close close" data-dismiss="alert">×</a> This is an <strong>.alert</strong>. Use this to show important messages to the user.
+              <a class="panel-close close" data-dismiss="alert">×</a> This is an <strong>.alert</strong>. Use this to show impormant messages to the user.
             </div>
             <table class="table table-hover table-striped">
               <tbody>
                 <tr>
                   <td>
-                    <span class="float-right font-weight-bold">3 hrs ago</span> Here is your a link to the latest summary report from the..
+                    <span class="float-right font-weight-bold">3 hrs ago</span> Here is your a link to the latest summary reporm from the..
                   </td>
                 </tr>
                 <tr>
@@ -90,7 +90,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <span class="float-right font-weight-bold">9/10</span> Porttitor vitae ultrices quis, dapibus id dolor. Morbi venenatis lacinia rhoncus.
+                    <span class="float-right font-weight-bold">9/10</span> Pormtitor vitae ultrices quis, dapibus id dolor. Morbi venenatis lacinia rhoncus.
                   </td>
                 </tr>
                 <tr>
@@ -109,110 +109,97 @@
 
 
           <div class="tab-pane" id="edit" aria-expanded="true">
-            <foRt enctype="multipart/foRt-data" role="foRt" action="{{ url('clientRts', $clientRt) }}" method="post">
+            <form enctype="multipart/form-data" role="form" action="{{ url('clientRts', $clientRt) }}" method="post">
               {{ csrf_field() }}
               {{ method_field('patch') }}
-              <div class="foRt-group row">
-                <label class="col-lg-3 col-foRt-label foRt-control-label">Nom</label>
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Nom</label>
                 <div class="col-lg-9">
-                  <input name="nom" class="foRt-control" type="text" value="{{$clientRt->nom}}">
+                  <input name="nom" class="form-control" type="text" value="{{$clientRt->nom}}">
                 </div>
               </div>
-              <div class="foRt-group row">
-                <label class="col-lg-3 col-foRt-label foRt-control-label">Prénoms</label>
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Prénoms</label>
                 <div class="col-lg-9">
-                  <input name="prenoms" class="foRt-control" type="text" value="{{$clientRt->prenoms}}">
+                  <input name="prenoms" class="form-control" type="text" value="{{$clientRt->prenoms}}">
                 </div>
               </div>
-              <div class="foRt-group row">
-                <label class="col-lg-3 col-foRt-label foRt-control-label">Email</label>
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Email</label>
                 <div class="col-lg-9">
-                  <input class="foRt-control" name="email" type="text" value="{{$clientRt->email}}">
+                  <input class="form-control" name="email" type="text" value="{{$clientRt->email}}">
                 </div>
               </div>
-              <div class="foRt-group row">
-                <label class="col-lg-3 col-foRt-label foRt-control-label">Numéro</label>
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Numéro</label>
                 <div class="col-lg-9">
-                  <input class="foRt-control" type="text" value="{{$clientRt->numero}}" name="Numero">
+                  <input class="form-control" type="text" value="{{$clientRt->numero}}" name="Numero">
                 </div>
               </div>
 
-              <div class="foRt-group row">
-                <label class="col-lg-3 col-foRt-label foRt-control-label">Photo</label>
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Photo</label>
                 <div class="col-lg-9">
                   <input type="file" name="image">
                 </div>
               </div>
-              <div class="foRt-group row">
-                <label class="col-lg-3 col-foRt-label foRt-control-label"></label>
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label"></label>
                 <div class="col-lg-9">
                   <input type="reset" class="btn btn-secondary" value="Annuler">
                   <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
                 </div>
               </div>
-            </foRt>
+            </form>
           </div>
 
           <div class="tab-pane" id="factures" aria-expanded="false">
-          <foRt action="{{ route('factureRts.store') }}" method="post" role="foRt">
+          <form action="{{ route('factureRts.store') }}" method="post" role="form">
               {{ csrf_field() }}
 
-              <div class="foRt-group row">
-                <label class="col-lg-3 col-foRt-label foRt-control-label">Nom de l'étudiant</label>
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Nom de l'étudiant</label>
                 <div class="col-lg-9">
-                  <select name="clientRt_id" class="foRt-control" style="">
+                  <select name="clientRt_id" class="form-control" style="">
                     <option value="{{ $clientRt->id }}">{{ $clientRt->nom }}</option>
                   </select>
                 </div>
                </div>
-              <div class="foRt-group row">
-                <label class="col-lg-3 col-foRt-label foRt-control-label">Cours</label>
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Montant de paiement</label>
                 <div class="col-lg-9">
-                  <select class="foRt-control" name="type_de_paiement">
-                    <option>FoRtation Développement Web</option>
-                    <option>FoRtation Jeu Vidéo</option>
-                    <option>FoRtation Design</option>
-                    <option>FoRtation Montage vidéo</option>
-                    <option>FoRtation Community Manager</option>
-                    <option>Marketing Digital</option>
-                 </select>
-                </div>
-              </div>
-              <div class="foRt-group row">
-                <label class="col-lg-3 col-foRt-label foRt-control-label">Montant de paiement</label>
-                <div class="col-lg-9">
-                  <input class="foRt-control" required name="montant_de_paiement" type="text">
+                  <input class="form-control" required name="montant_de_paiement" type="text">
                 </div>
                </div>
-               <div class="foRt-group row">
-                 <label class="col-lg-3 col-foRt-label foRt-control-label">Reste à payer</label>
+               <div class="form-group row">
+                 <label class="col-lg-3 col-form-label form-control-label">Reste à payer</label>
                  <div class="col-lg-9">
-                   <input class="foRt-control" required name="reste" type="text">
+                   <input class="form-control" required name="reste" type="text">
                  </div>
                 </div>
-               <div class="foRt-group row">
-                <label class="col-lg-3 col-foRt-label foRt-control-label">Date de paiement</label>
+               <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Date de paiement</label>
                 <div class="col-lg-9">
-                  <input class="foRt-control" required name="date_de_paiement" type="date">
+                  <input class="form-control" required name="date_de_paiement" type="date">
                 </div>
                </div>
                <button class="pull-right btn btn-primary" type="submit">Créer facture</button>
-          </foRt>
+          </form>
           </div>
 
           <div class="tab-pane" id="delete" aria-expanded="false">
-              <div class="foRt-group row">
-                <label class="col-lg-3 col-foRt-label foRt-control-label">(Attention cette action est irréversible ! )</label>
-                <foRt action="{{ route('clientRts.destroy', $clientRt) }}" method="post">
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">(Attention cette action est irréversible ! )</label>
+                <form action="{{ route('clientRts.destroy', $clientRt) }}" method="post">
                     {{ csrf_field() }}
                     {{ method_field('delete') }}
                     <button class="btn btn-danger" type="submit">Supprimer ce compte étudiant</button>
-                </foRt>
+                </form>
 
               </div>
 
 
-          </foRt>
+          </form>
           </div>
 
 
