@@ -43,6 +43,8 @@
                 <a class="dropdown-item" href="{{ route('formateurs.create') }}">Formateurs Oschool</a>
                 <a class="dropdown-item" href="{{ route('clientRts.create') }}">Clients R. Technologies</a>
                 <a class="dropdown-item" href="{{ route('clientRms.create') }}">Clients R. Media</a>
+                <a class="dropdown-item" href="{{ route('clientBootcamps.create') }}">Clients Bootcamp</a>
+                <a class="dropdown-item" href="{{ route('clientSoutenances.create') }}">Clients Soutenances</a>
               </div>
             </li>
             <li class="dropdown">
@@ -54,6 +56,8 @@
                 <a class="dropdown-item" href="{{ route('formateurs.index') }}">Formateurs Oschool</a>
                 <a class="dropdown-item" href="{{ route('clientRts.index') }}">Clients R. Technologies</a>
                 <a class="dropdown-item" href="{{ route('clientRms.index') }}">Clients R. Media</a>
+                <a class="dropdown-item" href="{{ route('clientBootcamps.index') }}">Clients Bootcamp</a>
+                <a class="dropdown-item" href="{{ route('clientSoutenances.index') }}">Clients Soutenances</a>
               </div>
             </li>
             @if(Auth::check())
