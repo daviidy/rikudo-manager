@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5,
       opacity: 1;
       visibility: visible;
       box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.25);
-      width: 63%;
+      width: 100%;
     }
     .probootstrap-main .card-columns .card a {
       position: relative;

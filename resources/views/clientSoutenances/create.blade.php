@@ -4,7 +4,7 @@
 
 <div class="container-contact100">
 		<div class="wrap-contact100">
-			<form enctype="multipart/form-data" action="{{ route('clientOschools.store') }}" method="post" class="contact100-form validate-form">
+			<form enctype="multipart/form-data" action="{{ route('clientBootcamps.store') }}" method="post" class="contact100-form validate-form">
 				<span class="contact100-form-title">
 					Inscrire un étudiant a la soutenance
 				</span>
