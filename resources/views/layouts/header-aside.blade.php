@@ -33,7 +33,7 @@
       <div class="probootstrap-overflow">
         <nav class="probootstrap-nav">
           <ul>
-            <li class="probootstrap-animate active" data-animate-effect="fadeInLeft"><a href="index.html">Accueil</a></li>
+            <li class="probootstrap-animate active" data-animate-effect="fadeInLeft"><a href="/">Accueil</a></li>
             <li class="dropdown">
               <a href="#" data-toggle="dropdown">
                 Créer un Client
