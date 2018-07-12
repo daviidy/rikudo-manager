@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\FactureBootcamp;
 use App\ClientBootcamp;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class FactureBootcampController extends Controller
@@ -15,7 +16,11 @@ class FactureBootcampController extends Controller
      */
     public function index()
     {
-        //
+      if (!Auth::check()) {
+        return redirect('login');
+      }
+      $clientBootcamps = ClientBootcamp::orderby('nom','asc');
+      return view('factureBootcamps.index', ['clientBootcamps' => $clientBootcamps]);
     }
 
     /**

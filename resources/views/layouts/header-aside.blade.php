@@ -60,6 +60,18 @@
                 <a class="dropdown-item" href="{{ route('clientSoutenances.index') }}">Clients Soutenances</a>
               </div>
             </li>
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown">
+                Liste des Factures
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{ route('factureOschools.index') }}">Factures Oschool</a>
+                <a class="dropdown-item" href="{{ route('factureRts.index') }}">Factures R. Technologies</a>
+                <a class="dropdown-item" href="{{ route('factureRms.index') }}">Factures R. Media</a>
+                <a class="dropdown-item" href="{{ route('factureBootcamps.index') }}">Factures Bootcamp</a>
+                <a class="dropdown-item" href="{{ route('factureSoutenances.index') }}">Factures Soutenances</a>
+              </div>
+            </li>
             @if(Auth::check())
 
             <li class="dropdown">
