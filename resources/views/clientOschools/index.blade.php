@@ -3,6 +3,8 @@
 @section('content')
 
       <!--là ou les photos des etudiants vont apparaitre -->
+@section('title', 'Etudiants Oschool')
+  <h1 class="text-center">Etudiants Oschool</h1><br>
 
 
 <div class="card-columns">

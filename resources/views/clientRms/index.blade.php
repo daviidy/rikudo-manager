@@ -4,6 +4,9 @@
 
       <!--là ou les photos des etudiants vont apparaitre -->
 
+      @section('title', 'Clients Rikudo Media')
+        <h1 class="text-center">Clients Rikudo Media</h1><br>
+
       <div class="card-columns">
 
       @foreach($clientRms as $clientRm)

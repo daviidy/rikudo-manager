@@ -3,6 +3,9 @@
 @section('content')
 
       <!--là ou les photos des etudiants vont apparaitre -->
+      @section('title', 'Formateurs Oschool')
+        <h1 class="text-center">Formateurs Oschool</h1><br>
+
       <div class="card-columns">
       @foreach($formateurs as $formateur)
 
