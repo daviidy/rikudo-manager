@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\FactureRt;
 use App\ClientRt;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class FactureRtController extends Controller
@@ -15,7 +16,11 @@ class FactureRtController extends Controller
      */
     public function index()
     {
-        //
+      if (!Auth::check()) {
+        return redirect('login');
+      }
+      $clientRts = ClientRt::orderBy ('nom','asc')->paginate(30);
+      return view('factureRts.index', ['clientRts' => $clientRts]);
     }
 
     /**

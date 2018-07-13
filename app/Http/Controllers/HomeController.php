@@ -26,13 +26,13 @@ class HomeController extends Controller
     public function index()
     {
         //auparavant home
-        $clientOschools = ClientOschool::orderby ('nom','asc')->paginate(5);
+        $clientOschools = ClientOschool::orderby ('nom','asc')->paginate(30);
         return view('clientOschools.index', ['clientOschools' => $clientOschools]);
     }
 
     public function homepage() {
       if (Auth::check()) {
-        $clientOschools = ClientOschool::orderby ('nom','asc')->paginate(5);
+        $clientOschools = ClientOschool::orderby ('nom','asc')->paginate(30);
         return view('clientOschools.index', ['clientOschools' => $clientOschools]);
       }
         return view('auth.login');

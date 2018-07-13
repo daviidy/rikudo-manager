@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\FactureSoutenance;
 use App\ClientSoutenance;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class FactureSoutenanceController extends Controller
@@ -15,7 +16,11 @@ class FactureSoutenanceController extends Controller
      */
     public function index()
     {
-        //
+      if (!Auth::check()) {
+        return redirect('login');
+      }
+      $clientSoutenances = ClientSoutenance::orderBy ('nom','asc')->paginate(30);
+      return view('factureSoutenances.index', ['clientSoutenances' => $clientSoutenances]);
     }
 
     /**

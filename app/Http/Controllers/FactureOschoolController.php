@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\FactureOschool;
 use App\ClientOschool;
-use Illuminate\Http\Request; 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class FactureOschoolController extends Controller
 {
@@ -15,7 +16,11 @@ class FactureOschoolController extends Controller
      */
     public function index()
     {
-        //
+      if (!Auth::check()) {
+        return redirect('login');
+      }
+      $clientOschools = ClientOschool::orderBy ('nom','asc')->paginate(30);
+      return view('factureOschools.index', ['clientOschools' => $clientOschools]);
     }
 
     /**

@@ -19,7 +19,7 @@ class FactureBootcampController extends Controller
       if (!Auth::check()) {
         return redirect('login');
       }
-      $clientBootcamps = ClientBootcamp::orderby('nom','asc');
+      $clientBootcamps = ClientBootcamp::orderBy ('nom','asc')->paginate(30);
       return view('factureBootcamps.index', ['clientBootcamps' => $clientBootcamps]);
     }
 
@@ -41,6 +41,7 @@ class FactureBootcampController extends Controller
      */
     public function store(Request $request)
     {
+      date('d-m-Y', strtotime($request->date_de_paiement));
       $facture = FactureBootcamp::create($request->all());
 
       return back()->with('status', 'La facture a bien été créée');

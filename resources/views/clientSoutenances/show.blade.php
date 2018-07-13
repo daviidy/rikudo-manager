@@ -190,7 +190,7 @@
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Nom de l'étudiant</label>
                 <div class="col-lg-9">
-                  <select name="clientSoutenance_id" class="form-control" style="">
+                  <select name="client_soutenance_id" class="form-control" style="">
                     <option value="{{ $clientSoutenance->id }}">{{ $clientSoutenance->nom }}</option>
                   </select>
                 </div>

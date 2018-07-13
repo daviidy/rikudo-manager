@@ -4,6 +4,7 @@
 
       <!--là ou les photos des etudiants vont apparaitre -->
 
+
 <div class="card-columns">
 
       @foreach($clientOschools as $clientOschool)
@@ -15,7 +16,7 @@
           </a>
           <div class="card-body">
             <h4 class="card-title">{{ $clientOschool->nom }}</h4>
-            <p class="card-text"> {{ $clientOschool->email }} </p>
+            <p class="card-text"> {{ $clientOschool->numero }} </p>
             <p class="card-text"> {{ $clientOschool->cours }} </p>
             <a href="{{ route('clientOschools.show', $clientOschool) }}" class="btn btn-primary">Voir profil</a>
           </div>

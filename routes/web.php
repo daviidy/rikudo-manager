@@ -11,8 +11,7 @@
 |
 */
 
-
-
+Route::resource('tests','TestController');
 
 Route::get('/', 'HomeController@homepage');
 Route::resource('clientOschools','ClientOschoolController');
