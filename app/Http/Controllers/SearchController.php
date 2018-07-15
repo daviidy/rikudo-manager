@@ -9,6 +9,7 @@ use App\ClientSoutenance;
 use App\ClientRm;
 use App\ClientRt;
 use App\Formateur;
+use Input;
 
 class SearchController extends Controller
 {
