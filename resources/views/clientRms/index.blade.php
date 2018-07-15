@@ -7,6 +7,50 @@
       @section('title', 'Clients Rikudo Media')
         <h1 class="text-center">Clients Rikudo Media</h1><br>
 
+        <p>Chercher parmi les clients Rikudo Media</p>
+               <div id="custom-search-input">
+                 <form action="/searchRm" method="POST" role="search">
+                   {{ csrf_field() }}
+                  <div class="input-group col-md-12">
+                      <input type="text" name="q" class="  search-query form-control" placeholder="Chercher" />
+                      <span class="input-group-btn">
+                          <button type="submit" class="btn btn-danger" type="button">
+                              <span class=" fa fa-search"></span>
+                          </button>
+                      </span>
+                  </div>
+                </form>
+              </div><br>
+
+              @if(isset($details))
+              <p> Les résultats de recherche pour <b> {{ $query }} </b> sont :</p>
+
+              <div class="card-columns">
+
+              @foreach($details as $clientRm)
+
+
+                <div class="card">
+                  <a href="#">
+                  <img class="card-img-top probootstrap-animate" src="/img/usersPhotos/{{$clientRm->image}}" alt="Card image cap">
+                  </a>
+                  <div class="card-body">
+                    <h4 class="card-title">{{ $clientRm->nom }}</h4>
+                    <p class="card-text"> {{ $clientRm->email }} </p>
+                    <a href="{{ route('clientRms.show', $clientRm) }}" class="btn btn-primary">Voir profil</a>
+                  </div>
+                </div>
+
+
+              @endforeach
+
+              </div>
+
+              @elseif(isset($message))
+              <p>{{ $message }}</p>
+              @else
+
+
       <div class="card-columns">
 
       @foreach($clientRms as $clientRm)
@@ -19,7 +63,7 @@
           <div class="card-body">
             <h4 class="card-title">{{ $clientRm->nom }}</h4>
             <p class="card-text"> {{ $clientRm->email }} </p>
-            <a href="{{ route('clientRms.show', $clientRm) }}" class="btn btn-primary">Voir profile</a>
+            <a href="{{ route('clientRms.show', $clientRm) }}" class="btn btn-primary">Voir profil</a>
           </div>
         </div>
 
@@ -29,5 +73,6 @@
       </div>
       {{ $clientRms->links() }}
 
+@endif
 
   @endsection

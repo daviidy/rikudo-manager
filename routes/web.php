@@ -39,3 +39,15 @@ Route::resource('clientRts','ClientRtController');
 
 
 Route::resource('formateurs','FormateurController');
+
+Route::post('/searchOschool', 'SearchController@searchOschool');
+
+Route::post('/searchBootcamp', 'SearchController@searchBootcamp');
+
+Route::post('/searchSoutenance', 'SearchController@searchSoutenance');
+
+Route::post('/searchRm', 'SearchController@searchRm');
+
+Route::post('/searchRt', 'SearchController@searchRt');
+
+Route::post('/searchFormateur', 'SearchController@searchFormateur');
