@@ -40,7 +40,7 @@ border-radius: 3px;">
               @foreach($details as $clientSoutenance)
 
 
-                <div class="card">
+                <div class="card" style="width: 63%;">
                   <a href="#">
                   <img class="card-img-top probootstrap-animate" src="/img/usersPhotos/{{$clientSoutenance->image}}" alt="Photo de l'étudiant">
                   </a>
@@ -84,6 +84,6 @@ border-radius: 3px;">
       </div>
       {{ $clientSoutenances->links() }}
 
-@endif
+    @endif
 
   @endsection

@@ -39,7 +39,7 @@ border-radius: 3px;">
               @foreach($details as $formateur)
 
 
-                <div class="card">
+                <div class="card" style="width: 63%;">
                   <a href="#">
                   <img class="card-img-top probootstrap-animate" src="/img/usersPhotos/{{$formateur->image}}" alt="Card image cap">
                   </a>

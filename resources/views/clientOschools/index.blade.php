@@ -38,7 +38,7 @@ border-radius: 3px;">
         <div class="card-columns">
 
               @foreach($details as $clientOschool)
-              <div class="card" style="width: 50%; margin: auto;">
+              <div class="card" style="width: 63%;">
                 <a href="#">
                 <img class="card-img-top probootstrap-animate" src="/img/usersPhotos/{{$clientOschool->image}}" alt="Photo de l'étudiant">
                 </a>

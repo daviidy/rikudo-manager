@@ -38,7 +38,6 @@ class SearchController extends Controller
     if ($q != "") {
       $user = ClientBootcamp::where('nom', 'LIKE', '%' . $q . '%')
                     ->orWhere('prenoms', 'LIKE', '%' . $q . '%')
-                    ->orWhere('cours', 'LIKE', '%' . $q . '%')
                     ->orWhere('email', 'LIKE', '%' . $q . '%')
                     ->get();
 
@@ -57,7 +56,6 @@ class SearchController extends Controller
     if ($q != "") {
       $user = ClientSoutenance::where('nom', 'LIKE', '%' . $q . '%')
                     ->orWhere('prenoms', 'LIKE', '%' . $q . '%')
-                    ->orWhere('cours', 'LIKE', '%' . $q . '%')
                     ->orWhere('email', 'LIKE', '%' . $q . '%')
                     ->get();
 
@@ -76,7 +74,6 @@ class SearchController extends Controller
     if ($q != "") {
       $user = ClientRm::where('nom', 'LIKE', '%' . $q . '%')
                     ->orWhere('prenoms', 'LIKE', '%' . $q . '%')
-                    ->orWhere('cours', 'LIKE', '%' . $q . '%')
                     ->orWhere('email', 'LIKE', '%' . $q . '%')
                     ->get();
 
@@ -95,7 +92,6 @@ class SearchController extends Controller
     if ($q != "") {
       $user = ClientOschool::where('nom', 'LIKE', '%' . $q . '%')
                     ->orWhere('prenoms', 'LIKE', '%' . $q . '%')
-                    ->orWhere('cours', 'LIKE', '%' . $q . '%')
                     ->orWhere('email', 'LIKE', '%' . $q . '%')
                     ->get();
 
@@ -114,7 +110,6 @@ class SearchController extends Controller
     if ($q != "") {
       $user = Formateur::where('nom', 'LIKE', '%' . $q . '%')
                     ->orWhere('prenoms', 'LIKE', '%' . $q . '%')
-                    ->orWhere('cours', 'LIKE', '%' . $q . '%')
                     ->orWhere('email', 'LIKE', '%' . $q . '%')
                     ->get();
 

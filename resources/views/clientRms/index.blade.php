@@ -41,7 +41,7 @@ border-radius: 3px;">
               @foreach($details as $clientRm)
 
 
-                <div class="card">
+                <div class="card" style="width: 63%;">
                   <a href="#">
                   <img class="card-img-top probootstrap-animate" src="/img/usersPhotos/{{$clientRm->image}}" alt="Card image cap">
                   </a>
