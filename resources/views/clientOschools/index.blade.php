@@ -13,7 +13,7 @@
               <div class="input-group col-md-12">
                   <input type="text" name="q" class="  search-query form-control" placeholder="Chercher" />
                   <span class="input-group-btn">
-                      <button type="submit" class="btn btn-danger" type="button">
+                      <button id = "bouton-search" type="submit" class="btn btn-danger" type="button">
                           <span class=" fa fa-search"></span>
                       </button>
                   </span>
