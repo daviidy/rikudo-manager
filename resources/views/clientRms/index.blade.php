@@ -14,7 +14,18 @@
                   <div class="input-group col-md-12">
                       <input type="text" name="q" class="  search-query form-control" placeholder="Chercher" />
                       <span class="input-group-btn">
-                          <button type="submit" class="btn btn-danger" type="button">
+                          <button type="submit" class="btn btn-danger" type="button" style="margin-top: 2px;
+position: relative;
+left: -28px;
+margin-bottom: 0px;
+color: rgb(217, 35, 15);
+border-width: 0px;
+border-style: initial;
+border-color: initial;
+border-image: initial;
+background: none;
+padding: 2px 5px;
+border-radius: 3px;">
                               <span class=" fa fa-search"></span>
                           </button>
                       </span>
