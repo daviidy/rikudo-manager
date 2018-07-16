@@ -28,7 +28,7 @@
       <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none"><span class="oi oi-arrow-left"></span> Close</a>
       <div class="probootstrap-site-logo probootstrap-animate" data-animate-effect="fadeInLeft">
 
-        <a href="index.html" class="mb-2 d-block probootstrap-logo"><B>Rikudo Manager</B></a>
+        <a href="/" class="mb-2 d-block probootstrap-logo"><B>Rikudo Manager</B></a>
         <p class="mb-0">Pour gérer les clients de Rikudo SARL</p>
       </div>
       <div class="probootstrap-overflow">
