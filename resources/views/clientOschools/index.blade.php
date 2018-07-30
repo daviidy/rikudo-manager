@@ -30,7 +30,7 @@ border-radius: 3px;">
                   </span>
               </div>
             </form>
-          </div><br>
+          </div><br> 
 
           @if(isset($details))
           <p> Les résultats de recherche pour <b> {{ $query }} </b> sont :</p>

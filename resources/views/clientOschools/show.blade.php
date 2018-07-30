@@ -44,7 +44,7 @@
                   {{$clientOschool->numero}}
                 </p>
               </div>
-              <div class="col-md-6">
+        <!--      <div class="col-md-6">
                 <h6>Recent badges</h6>
                 <a href="#" class="badge badge-dark badge-pill">html5</a>
                 <a href="#" class="badge badge-dark badge-pill">react</a>
@@ -58,9 +58,9 @@
                 <span class="badge badge-primary"><i class="fa fa-user"></i> 900 Followers</span>
                 <span class="badge badge-success"><i class="fa fa-cog"></i> 43 Forks</span>
                 <span class="badge badge-danger"><i class="fa fa-eye"></i> 245 Views</span>
-              </div>
+              </div> -->
               <div class="col-md-12">
-                <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> Activités récentes</h5>
+                <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> Activités récentes et factures</h5>
                 <table class="table table-sm table-hover table-striped">
                   <tbody>
                     <tr>
@@ -68,12 +68,14 @@
                         S'est inscrit à la formation le <strong>{{ $clientOschool->created_at }}</strong>
                       </td>
                     </tr>
+                    @foreach($clientOschool->factureOschools as $factureOschool)
                     <tr>
                       <td>
-                        A payé <strong>5 000 </strong>FCFA le <strong>`Discussions`</strong>. Il reste
-                        à payer <strong>40 000 </strong> FCFA.
+                        A payé <strong>{{$factureOschool->montant_de_paiement}} </strong>FCFA le <strong>{{ Carbon\Carbon::parse($factureOschool->date_de_paiement)->format('d-m-Y') }}</strong>. Il reste
+                        à payer <strong><p style="font-weight: bold; color: {{ $factureOschool->reste != '0' ? '#F7761F' : "" }}" class="cell100 column4">{{$factureOschool->reste}}</p></strong> FCFA.
                       </td>
                     </tr>
+                    @endforeach
 
                   </tbody>
                 </table>

@@ -87,7 +87,7 @@ class ClientOschoolController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ClientOschool  $clientOschool
+     * @param  \App\ClientOschool  $clientOschool 
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, ClientOschool $clientOschool)
