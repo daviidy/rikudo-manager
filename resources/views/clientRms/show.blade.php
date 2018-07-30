@@ -67,7 +67,7 @@
                     <tr>
                       <td>
                         A payé <strong>{{$factureRm->montant_de_paiement}} </strong>FCFA le <strong>{{ Carbon\Carbon::parse($factureRm->date_de_paiement)->format('d-m-Y') }}</strong>. Il reste
-                        à payer <strong><p style="font-weight: bold; color: {{ $factureRm->reste != '0' ? '#F7761F' : "" }}" class="cell100 column4">{{$factureRm->reste}}</p></strong> FCFA.
+                        à payer <strong style="font-weight: bold; color: {{ $factureRm->reste != '0' ? '#F7761F' : "" }}" class="cell100 column4">{{$factureRm->reste}}</strong> FCFA.
                       </td>
                     </tr>
                     @endforeach
