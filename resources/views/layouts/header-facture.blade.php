@@ -25,51 +25,48 @@
 
 	<nav class="navbar navbar-expand-sm menu">
   <!-- Brand -->
-  <a class="navbar-brand" href="/">Rikudo Manager</a>
+  <a class="navbar-brand" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rikudo Manager</font></font></a>
 
   <!-- Links -->
   <ul class="navbar-nav">
-		<li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Créer un Client
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{{ route('clientOschools.create') }}">Etudiants Oschool</a>
-                <a class="dropdown-item" href="{{ route('formateurs.create') }}">Formateurs Oschool</a>
-                <a class="dropdown-item" href="{{ route('clientRts.create') }}">Clients R. Technologies</a>
-                <a class="dropdown-item" href="{{ route('clientRms.create') }}">Clients R. Media</a>
-                <a class="dropdown-item" href="{{ route('clientBootcamps.create') }}">Clients Bootcamp</a>
-                <a class="dropdown-item" href="{{ route('clientSoutenances.create') }}">Clients Soutenances</a>
-                <a class="dropdown-item" href="{{ route('clientUniversites.create') }}">Clients Universités</a>
-              </div>
-            </li>
-            <li class="dropdown">
-              <a href="#" data-toggle="dropdown">
-                Liste des Clients
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{{ route('clientOschools.index') }}">Etudiants Oschool</a>
-                <a class="dropdown-item" href="{{ route('formateurs.index') }}">Formateurs Oschool</a>
-                <a class="dropdown-item" href="{{ route('clientRts.index') }}">Clients R. Technologies</a>
-                <a class="dropdown-item" href="{{ route('clientRms.index') }}">Clients R. Media</a>
-                <a class="dropdown-item" href="{{ route('clientBootcamps.index') }}">Clients Bootcamp</a>
-                <a class="dropdown-item" href="{{ route('clientSoutenances.index') }}">Clients Soutenances</a>
-                <a class="dropdown-item" href="{{ route('clientUniversites.index') }}">Clients Universités</a>
-              </div>
-            </li>
-            <li class="dropdown">
-              <a href="#" data-toggle="dropdown">
-                Liste des Factures
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{{ route('factureOschools.index') }}">Factures Oschool</a>
-                <a class="dropdown-item" href="{{ route('factureRts.index') }}">Factures R. Technologies</a>
-                <a class="dropdown-item" href="{{ route('factureRms.index') }}">Factures R. Media</a>
-                <a class="dropdown-item" href="{{ route('factureBootcamps.index') }}">Factures Bootcamp</a>
-                <a class="dropdown-item" href="{{ route('factureSoutenances.index') }}">Factures Soutenances</a>
-                <a class="dropdown-item" href="{{ route('factureUniversites.index') }}">Factures Universités</a>
-              </div>
-		</li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        Créer un client
+      </font></font></a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="http://manager.rikudotech.com/clientOschools/create"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Etudiants Oschool </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/formateurs/create"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Formateurs Oschool </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/clientRts/create"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clients R. Technologies </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/clientRms/create"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clients R. Media </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/clientBootcamps/create"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clients Bootcamp </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/clientSoutenances/create"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clients Soutenances</font></font></a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        Liste des clients
+      </font></font></a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="http://manager.rikudotech.com/clientOschools"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Etudiants Oschool </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/formateurs"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Formateurs Oschool </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/clientRts"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clients R. Technologies </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/clientRms"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clients R. Media </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/clientBootcamps"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clients Bootcamp </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/clientSoutenances"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clients Soutenances</font></font></a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        Liste des factures
+      </font></font></a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="http://manager.rikudotech.com/factureOschools"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Factures Factures </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/factureRts"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oschool R. Factures Technologies </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/factureRms"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">R. </font></font></a>
+        <a class="dropdown-item" href="http://manager.rikudotech.com/factureBootcamps"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Factures </font></font></a>
+        <font style="vertical-align: inherit;"><a class="dropdown-item" href="http://manager.rikudotech.com/factureRms"><font style="vertical-align: inherit;">médias </font></a><a class="dropdown-item" href="http://manager.rikudotech.com/factureBootcamps"><font style="vertical-align: inherit;">Factures Bootcamp </font></a></font><a class="dropdown-item" href="http://manager.rikudotech.com/factureSoutenances"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soutenances</font></font></a>
+      </div>
+    </li>
   </ul>
 </nav>
 

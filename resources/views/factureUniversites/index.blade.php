@@ -2,8 +2,7 @@
 
 @section('content')
 
-<lang 
-<h1 class="text-center">Factures Universités</h1><br><br>
+<h1 class="text-center">Factures Université </h1><br><br>
 
 <div class="table100 ver1 m-b-110">
   <div class="table100-head">
@@ -14,6 +13,7 @@
           <th class="cell100 column2">Date</th>
           <th class="cell100 column3">Montant</th>
           <th class="cell100 column4">Reste</th>
+          <th class="cell100 column5">Email</th>
         </tr>
       </thead>
     </table>
@@ -33,6 +33,7 @@
           <td class="cell100 column2">{{ Carbon\Carbon::parse($factureUniversite->date_de_paiement)->format('d-m-Y') }}</td>
           <td class="cell100 column3">{{$factureUniversite->montant_de_paiement}}</td>
           <td style="font-weight: bold; color: {{ $factureUniversite->reste != '0' ? '#F7761F' : "" }}" class="cell100 column4">{{$factureUniversite->reste}}</td>
+          <td class="cell100 column5">{{$clientUniversite->email}}</td>
         </tr>
           @endforeach
         @endforeach
