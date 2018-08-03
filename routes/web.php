@@ -21,10 +21,11 @@ Route::resource('factureRts','FactureRtController');
 Route::resource('factureRms','FactureRmController');
 Route::resource('factureBootcamps','FactureBootcampController');
 Route::resource('factureSoutenances','FactureSoutenanceController');
+Route::resource('factureUniversites','FactureUniversiteController');
 
 Route::resource('clientBootcamps','ClientBootcampController');
 Route::resource('clientSoutenances','ClientSoutenanceController');
-
+Route::resource('clientUniversites','ClientUniversiteController');
 
 
 
@@ -51,3 +52,6 @@ Route::post('/searchRm', 'SearchController@searchRm');
 Route::post('/searchRt', 'SearchController@searchRt');
 
 Route::post('/searchFormateur', 'SearchController@searchFormateur');
+
+Route::post('/searchUniversite', 'SearchController@searchUniversite');
+

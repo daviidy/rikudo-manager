@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <title>Rikudo Manager | @yield('title')</title>
     <meta charset="utf-8">
@@ -46,6 +46,7 @@
                 <a class="dropdown-item" href="{{ route('clientRms.create') }}">Clients R. Media</a>
                 <a class="dropdown-item" href="{{ route('clientBootcamps.create') }}">Clients Bootcamp</a>
                 <a class="dropdown-item" href="{{ route('clientSoutenances.create') }}">Clients Soutenances</a>
+                <a class="dropdown-item" href="{{ route('clientUniversites.create') }}">Clients Universités</a>
               </div>
             </li>
             <li class="dropdown">
@@ -59,6 +60,7 @@
                 <a class="dropdown-item" href="{{ route('clientRms.index') }}">Clients R. Media</a>
                 <a class="dropdown-item" href="{{ route('clientBootcamps.index') }}">Clients Bootcamp</a>
                 <a class="dropdown-item" href="{{ route('clientSoutenances.index') }}">Clients Soutenances</a>
+                <a class="dropdown-item" href="{{ route('clientUniversites.index') }}">Clients Universités</a>
               </div>
             </li>
             <li class="dropdown">
@@ -71,6 +73,7 @@
                 <a class="dropdown-item" href="{{ route('factureRms.index') }}">Factures R. Media</a>
                 <a class="dropdown-item" href="{{ route('factureBootcamps.index') }}">Factures Bootcamp</a>
                 <a class="dropdown-item" href="{{ route('factureSoutenances.index') }}">Factures Soutenances</a>
+                <a class="dropdown-item" href="{{ route('factureUniversites.index') }}">Factures Universités</a>
               </div>
             </li>
             @if(Auth::check())
