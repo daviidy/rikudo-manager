@@ -209,8 +209,13 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+<<<<<<< HEAD
         'Input' => Illuminate\Support\Facades\Input::class,
         'image' => Intervention\Image\Facades\Image::class,
+=======
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Input' => Illuminate\Support\Facades\Input::class,
+>>>>>>> e5941221b550ae3bd37f5dea67fc5b6184b4fb03
 
     ],
 

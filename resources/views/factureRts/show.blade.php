@@ -180,7 +180,11 @@
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Nom de l'étudiant</label>
                 <div class="col-lg-9">
+<<<<<<< HEAD
                   <select name="client_oschool_id" class="form-control" style="">
+=======
+                  <select name="clientOschool_id" class="form-control" style="">
+>>>>>>> e5941221b550ae3bd37f5dea67fc5b6184b4fb03
                     <option value="{{ $clientOschool->id }}">{{ $clientOschool->nom }}</option>
                   </select>
                 </div>

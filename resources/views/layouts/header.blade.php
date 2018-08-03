@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="fr">
+=======
+<html lang="en">
+>>>>>>> e5941221b550ae3bd37f5dea67fc5b6184b4fb03
 <head>
 	<title>Rikudo Manager | @yield('title')</title>
 	<meta charset="UTF-8">

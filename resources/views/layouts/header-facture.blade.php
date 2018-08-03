@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="fr">
+=======
+<html lang="en">
+>>>>>>> e5941221b550ae3bd37f5dea67fc5b6184b4fb03
 <head>
 	<title>Liste des Factures | @yield('title')</title>
 	<meta charset="UTF-8">
@@ -25,6 +29,7 @@
 
 	<nav class="navbar navbar-expand-sm menu">
   <!-- Brand -->
+<<<<<<< HEAD
   <a class="navbar-brand" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rikudo Manager</font></font></a>
 
   <!-- Links -->
@@ -67,6 +72,50 @@
         <font style="vertical-align: inherit;"><a class="dropdown-item" href="http://manager.rikudotech.com/factureRms"><font style="vertical-align: inherit;">médias </font></a><a class="dropdown-item" href="http://manager.rikudotech.com/factureBootcamps"><font style="vertical-align: inherit;">Factures Bootcamp </font></a></font><a class="dropdown-item" href="http://manager.rikudotech.com/factureSoutenances"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soutenances</font></font></a>
       </div>
     </li>
+=======
+  <a class="navbar-brand" href="/">Rikudo Manager</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+		<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Créer un client
+      </a>
+      <div class="dropdown-menu">
+				<a class="dropdown-item" href="{{ route('clientOschools.create') }}">Etudiants Oschool</a>
+				<a class="dropdown-item" href="{{ route('formateurs.create') }}">Formateurs Oschool</a>
+				<a class="dropdown-item" href="{{ route('clientRts.create') }}">Clients R. Technologies</a>
+				<a class="dropdown-item" href="{{ route('clientRms.create') }}">Clients R. Media</a>
+				<a class="dropdown-item" href="{{ route('clientBootcamps.create') }}">Clients Bootcamp</a>
+				<a class="dropdown-item" href="{{ route('clientSoutenances.create') }}">Clients Soutenances</a>
+      </div>
+    </li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+				Liste des clients
+			</a>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="{{ route('clientOschools.index') }}">Etudiants Oschool</a>
+				<a class="dropdown-item" href="{{ route('formateurs.index') }}">Formateurs Oschool</a>
+				<a class="dropdown-item" href="{{ route('clientRts.index') }}">Clients R. Technologies</a>
+				<a class="dropdown-item" href="{{ route('clientRms.index') }}">Clients R. Media</a>
+				<a class="dropdown-item" href="{{ route('clientBootcamps.index') }}">Clients Bootcamp</a>
+				<a class="dropdown-item" href="{{ route('clientSoutenances.index') }}">Clients Soutenances</a>
+			</div>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+				Liste des factures
+			</a>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="{{ route('factureOschools.index') }}">Factures Oschool</a>
+				<a class="dropdown-item" href="{{ route('factureRts.index') }}">Factures R. Technologies</a>
+				<a class="dropdown-item" href="{{ route('factureRms.index') }}">Factures R. Media</a>
+				<a class="dropdown-item" href="{{ route('factureBootcamps.index') }}">Factures Bootcamp</a>
+				<a class="dropdown-item" href="{{ route('factureSoutenances.index') }}">Factures Soutenances</a>
+			</div>
+		</li>
+>>>>>>> e5941221b550ae3bd37f5dea67fc5b6184b4fb03
   </ul>
 </nav>
 

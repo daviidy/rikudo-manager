@@ -19,8 +19,13 @@ class CreateFactureOschoolsTable extends Migration
             $table->double('montant_de_paiement');
             $table->double('reste');
             $table->date('date_de_paiement');
+<<<<<<< HEAD
             $table->integer('client_oschool_id')->unsigned()->nullable();
             $table->foreign('client_oschool_id')->references('id')->on('client_oschools');
+=======
+            $table->integer('clientOschool_id')->unsigned()->nullable();
+            $table->foreign('clientOschool_id')->references('id')->on('client_oschools');
+>>>>>>> e5941221b550ae3bd37f5dea67fc5b6184b4fb03
             $table->timestamps();
         });
     }

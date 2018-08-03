@@ -9,7 +9,10 @@ use App\ClientSoutenance;
 use App\ClientRm;
 use App\ClientRt;
 use App\Formateur;
+<<<<<<< HEAD
 use App\ClientUniversite;
+=======
+>>>>>>> e5941221b550ae3bd37f5dea67fc5b6184b4fb03
 use Input; 
 
 class SearchController extends Controller
@@ -123,6 +126,7 @@ class SearchController extends Controller
 
   }
 
+<<<<<<< HEAD
   public function searchUniversite(){
 
     $q = Input::get('q');
@@ -142,6 +146,8 @@ class SearchController extends Controller
   }
     
 
+=======
+>>>>>>> e5941221b550ae3bd37f5dea67fc5b6184b4fb03
 
 
 

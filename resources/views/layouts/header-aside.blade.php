@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="fr">
+=======
+<html lang="en">
+>>>>>>> e5941221b550ae3bd37f5dea67fc5b6184b4fb03
   <head>
     <title>Rikudo Manager | @yield('title')</title>
     <meta charset="utf-8">
@@ -46,7 +50,10 @@
                 <a class="dropdown-item" href="{{ route('clientRms.create') }}">Clients R. Media</a>
                 <a class="dropdown-item" href="{{ route('clientBootcamps.create') }}">Clients Bootcamp</a>
                 <a class="dropdown-item" href="{{ route('clientSoutenances.create') }}">Clients Soutenances</a>
+<<<<<<< HEAD
                 <a class="dropdown-item" href="{{ route('clientUniversites.create') }}">Clients Universités</a>
+=======
+>>>>>>> e5941221b550ae3bd37f5dea67fc5b6184b4fb03
               </div>
             </li>
             <li class="dropdown">
@@ -60,7 +67,10 @@
                 <a class="dropdown-item" href="{{ route('clientRms.index') }}">Clients R. Media</a>
                 <a class="dropdown-item" href="{{ route('clientBootcamps.index') }}">Clients Bootcamp</a>
                 <a class="dropdown-item" href="{{ route('clientSoutenances.index') }}">Clients Soutenances</a>
+<<<<<<< HEAD
                 <a class="dropdown-item" href="{{ route('clientUniversites.index') }}">Clients Universités</a>
+=======
+>>>>>>> e5941221b550ae3bd37f5dea67fc5b6184b4fb03
               </div>
             </li>
             <li class="dropdown">
@@ -73,7 +83,10 @@
                 <a class="dropdown-item" href="{{ route('factureRms.index') }}">Factures R. Media</a>
                 <a class="dropdown-item" href="{{ route('factureBootcamps.index') }}">Factures Bootcamp</a>
                 <a class="dropdown-item" href="{{ route('factureSoutenances.index') }}">Factures Soutenances</a>
+<<<<<<< HEAD
                 <a class="dropdown-item" href="{{ route('factureUniversites.index') }}">Factures Universités</a>
+=======
+>>>>>>> e5941221b550ae3bd37f5dea67fc5b6184b4fb03
               </div>
             </li>
             @if(Auth::check())
