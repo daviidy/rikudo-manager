@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<title>Rikudo Manager | @yield('title')</title>
 	<meta charset="UTF-8">

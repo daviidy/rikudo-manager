@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AjoutChampEmailsAClientsOschool extends Migration
+
+class AjoutChampImageAClientsOschool extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +15,7 @@ class AjoutChampEmailsAClientsOschool extends Migration
     public function up()
     {
       Schema::table('client_oschools', function (Blueprint $table) {
-          $table->string('email')->default('exemple@mail.com');
-          $table->string('image')->default('image.jpg');
+          $table->string('image')->default('image.jpeg');
       });
     }
 
@@ -26,7 +26,6 @@ class AjoutChampEmailsAClientsOschool extends Migration
      */
     public function down()
     {
-        $table->dropColumn('email');
         $table->dropColumn('image');
     }
 }
