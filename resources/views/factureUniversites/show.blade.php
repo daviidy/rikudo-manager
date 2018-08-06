@@ -1,6 +1,10 @@
 @extends('layouts.header-profile')
 
+<<<<<<< HEAD
 @section('title', $clientOschool->nom)
+=======
+@section('title', $clientUniversite->nom)
+>>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
 @section('content')
 
   <div class="container">
@@ -31,6 +35,7 @@
             <h5 class="mb-3">Profil Client</h5>
             <div class="row">
               <div class="col-md-6">
+<<<<<<< HEAD
                 <h6>A propos de {{$clientOschool->nom}}</h6>
                 <p>
                   Etudiant Oschool
@@ -42,6 +47,15 @@
                 <h6>Numéro</h6>
                 <p>
                   {{$clientOschool->numero}}
+=======
+                <h6>A propos de {{$clientUniversite->nom}}</h6>
+                <p>
+                  Etudiant Oschool Université
+                </p>
+                <h6>Email</h6>
+                <p>
+                  {{$clientUniversite->email}}
+>>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
                 </p>
               </div>
               <div class="col-md-6">
@@ -65,7 +79,11 @@
                   <tbody>
                     <tr>
                       <td>
+<<<<<<< HEAD
                         S'est inscrit à la formation le <strong>{{ $clientOschool->created_at }}</strong>
+=======
+                        S'est inscrit à la formation le <strong>{{ $clientUniversite->created_at }}</strong>
+>>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
                       </td>
                     </tr>
                     <tr>
@@ -118,24 +136,37 @@
 
 
           <div class="tab-pane" id="edit" aria-expanded="true">
+<<<<<<< HEAD
             <form enctype="multipart/form-data" role="form" action="{{ url('clientOschools', $clientOschool) }}" method="post">
+=======
+            <form enctype="multipart/form-data" role="form" action="{{ url('clientUniversites', $clientUniversite) }}" method="post">
+>>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
               {{ csrf_field() }}
               {{ method_field('patch') }}
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Nom</label>
                 <div class="col-lg-9">
+<<<<<<< HEAD
                   <input name="nom" class="form-control" type="text" value="{{$clientOschool->nom}}">
+=======
+                  <input name="nom" class="form-control" type="text" value="{{$clientUniversite->nom}}">
+>>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Prénoms</label>
                 <div class="col-lg-9">
+<<<<<<< HEAD
                   <input name="prenoms" class="form-control" type="text" value="{{$clientOschool->prenoms}}">
+=======
+                  <input name="prenoms" class="form-control" type="text" value="{{$clientUniversite->prenoms}}">
+>>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Email</label>
                 <div class="col-lg-9">
+<<<<<<< HEAD
                   <input class="form-control" name="email" type="text" value="{{$clientOschool->email}}">
                 </div>
               </div>
@@ -157,6 +188,13 @@
       						</select>
       					</div>
               </div>
+=======
+                  <input class="form-control" name="email" type="text" value="{{$clientUniversite->email}}">
+                </div>
+              </div>
+              
+             
+>>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Photo</label>
                 <div class="col-lg-9">
@@ -174,12 +212,17 @@
           </div>
 
           <div class="tab-pane" id="factures" aria-expanded="false">
+<<<<<<< HEAD
           <form action="{{ route('factureOschools.store') }}" method="post" role="form">
+=======
+          <form action="{{ route('factureUniversites.store') }}" method="post" role="form">
+>>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
               {{ csrf_field() }}
 
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Nom de l'étudiant</label>
                 <div class="col-lg-9">
+<<<<<<< HEAD
                   <select name="clientOschool_id" class="form-control" style="">
                     <option value="{{ $clientOschool->id }}">{{ $clientOschool->nom }}</option>
                   </select>
@@ -198,6 +241,15 @@
                  </select>
                 </div>
               </div>
+=======
+                  <select name="client_universite_id" class="form-control" style="">
+                    <option value="{{ $clientUniversite->id }}">{{ $clientUniversite->nom }}</option>
+                  </select>
+                </div>
+               </div>
+             
+                
+>>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Montant de paiement</label>
                 <div class="col-lg-9">
@@ -223,7 +275,11 @@
           <div class="tab-pane" id="delete" aria-expanded="false">
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">(Attention cette action est irréversible ! )</label>
+<<<<<<< HEAD
                 <form action="{{ route('clientOschools.destroy', $clientOschool) }}" method="post">
+=======
+                <form action="{{ route('clientUniversites.destroy', $clientUniversite) }}" method="post">
+>>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
                     {{ csrf_field() }}
                     {{ method_field('delete') }}
                     <button class="btn btn-danger" type="submit">Supprimer ce compte étudiant</button>
@@ -240,7 +296,11 @@
         </div>
       </div>
       <div class="col-lg-4 order-lg-1 text-center">
+<<<<<<< HEAD
         <img src="/img/usersPhotos/{{ $clientOschool->image }}" class="mx-auto img-fluid img-circle d-block" alt="avatar">
+=======
+        <img src="/img/usersPhotos/{{ $clientUniversite->image }}" class="mx-auto img-fluid img-circle d-block" alt="avatar">
+>>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
       </div>
     </div>
   </div>

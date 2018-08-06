@@ -22,7 +22,7 @@ class CreateClientBootcampsTable extends Migration
             $table->string('filiere')->default('SRIT');
             $table->string('theme')->default('Installation serveur asterisk');
             $table->string('diplome_soutenu')->default('Licence');
-            $table->string('image')->default('image.jpeg');
+            $table->string('image')->default('image.jpg');
             $table->timestamps();
         });
     }

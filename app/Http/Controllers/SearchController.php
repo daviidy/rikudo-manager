@@ -9,6 +9,7 @@ use App\ClientSoutenance;
 use App\ClientRm;
 use App\ClientRt;
 use App\Formateur;
+use App\ClientUniversite;
 use Input; 
 
 class SearchController extends Controller
@@ -121,6 +122,25 @@ class SearchController extends Controller
     return view('formateurs.index')->withMessage("Aucun utilisateur trouvé !");
 
   }
+
+  public function searchUniversite(){
+
+    $q = Input::get('q');
+    if ($q != "") {
+      $user = ClientUniversite::where('nom', 'LIKE', '%' . $q . '%')
+                    ->orWhere('prenoms', 'LIKE', '%' . $q . '%')
+                    ->orWhere('email', 'LIKE', '%' . $q . '%')
+                    ->get();
+
+                    if (count($user) > 0) {
+                      return view('clientUniversites.index')->withDetails($user)->withQuery($q);
+                    }
+                  }  
+
+    return view('clientUniversites.index')->withMessage("Aucun utilisateur trouvé !");
+
+  }
+    
 
 
 

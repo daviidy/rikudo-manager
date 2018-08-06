@@ -27,6 +27,7 @@
 					<input class="input100" type="text" name="email" placeholder="Entrer l'adresse email">
 					<span class="focus-input100"></span>
 				</div>
+<<<<<<< HEAD
 
 				<div class="wrap-input100 validate-input" data-validate="Numero is required">
 					<span class="label-input100">Photo</span>
@@ -34,6 +35,9 @@
 					<span class="focus-input100"></span>
 				</div>
 
+=======
+
+>>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
 				<div class="container-contact100-form-btn">
 					<div class="wrap-contact100-form-btn">
 						<div class="contact100-form-bgbtn"></div>

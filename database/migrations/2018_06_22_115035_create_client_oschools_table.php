@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+
 class CreateClientOschoolsTable extends Migration
 {
     /**
@@ -20,7 +21,7 @@ class CreateClientOschoolsTable extends Migration
             $table->string('email')->unique()->default('exemple@mail.com');
             $table->string('numero')->default('58450600');
             $table->string('cours')->default('Cours');
-            $table->string('image')->default('image.jpeg');
+            $table->string('image')->default('image.jpg');
             $table->timestamps();
         });
     }
