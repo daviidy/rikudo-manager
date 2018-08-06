@@ -30,11 +30,8 @@ border-radius: 3px;">
                   </span>
               </div>
             </form>
-<<<<<<< HEAD
           </div><br>
-=======
           </div><br>
->>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
 
           @if(isset($details))
           <p> Les résultats de recherche pour <b> {{ $query }} </b> sont :</p>
@@ -48,13 +45,10 @@ border-radius: 3px;">
                 </a>
                 <div class="card-body">
                   <h4 class="card-title">{{ $clientUniversite->nom }}</h4>
-<<<<<<< HEAD
                   <p class="card-text"> {{ $clientUniversite->email }} </p>
                   <p class="card-text"> {{ $clientUniversite->cours }} </p>
-=======
                   <p class="card-text"> {{ $clientUniversite->numero }} </p>
                   <p class="card-text"> {{ $clientUniversite->email }} </p>
->>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
                   <a href="{{ route('clientUniversites.show', $clientUniversite) }}" class="btn btn-primary">Voir profil</a>
                 </div>
               </div>
@@ -78,13 +72,10 @@ border-radius: 3px;">
           </a>
           <div class="card-body">
             <h4 class="card-title">{{ $clientUniversite->nom }}</h4>
-<<<<<<< HEAD
             <p class="card-text"> {{ $clientUniversite->email }} </p>
             <p class="card-text"> {{ $clientUniversite->cours }} </p>
-=======
             <p class="card-text"> {{ $clientUniversite->numero }} </p>
             <p class="card-text"> {{ $clientUniversite->email }} </p>
->>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
             <a href="{{ route('clientUniversites.show', $clientUniversite) }}" class="btn btn-primary">Voir profil</a>
           </div>
         </div>

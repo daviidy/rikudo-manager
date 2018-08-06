@@ -39,9 +39,9 @@
                 <p>
                   {{$clientUniversite->cours}}
                 </p>
-                <h6>Numéro</h6>
+                <h6>Email</h6>
                 <p>
-                  {{$clientUniversite->numero}}
+                  {{$clientUniversite->email}}
                 </p>
               </div>
         <!--      <div class="col-md-6">
@@ -141,16 +141,12 @@
                   <input class="form-control" name="email" type="text" value="{{$clientUniversite->email}}">
                 </div>
               </div>
-<<<<<<< HEAD
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Photo</label>
                 <div class="col-lg-9">
                   <input type="file" name="image">
                 </div>
               </div>
-=======
-
->>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label"></label>
                 <div class="col-lg-9">
@@ -168,19 +164,11 @@
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Nom de l'étudiant</label>
                 <div class="col-lg-9">
-<<<<<<< HEAD
-                  <select name="client_oschool_id" class="form-control" style="">
-=======
                   <select name="client_universite_id" class="form-control" style="">
->>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
                     <option value="{{ $clientUniversite->id }}">{{ $clientUniversite->nom }}</option>
                   </select>
                 </div>
                </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Montant de paiement</label>
                 <div class="col-lg-9">
@@ -225,13 +213,6 @@
       <div class="col-lg-4 order-lg-1 text-center">
         <img src="/img/usersPhotos/{{ $clientUniversite->image }}" class="mx-auto img-fluid img-circle d-block" alt="avatar">
       </div>
-<<<<<<< HEAD
-=======
-
-      <div class="col-lg-4 order-lg-1 text-center">
-        <img src="/img/shoes.jpg" class="mx-auto img-fluid img-circle d-block" alt="avatar">
-      </div>
->>>>>>> 9e01b834002e637971df51350e8e8b38c228c24b
     </div>
   </div>
 
