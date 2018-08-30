@@ -177,6 +177,8 @@
       							<option>Laboratoire Cisco CCNA</option>
                     <option>Comment installer Unity et coder son jeu ?</option>
       							<option>Booster son business avec Facebook</option>
+                    <option>Apprendre Photoshop</option>
+                    <option>Apprendre After Effects</option>
       						</select>
       					</div>
               </div>
@@ -210,7 +212,7 @@
         </div>
       </div>
       <div class="col-lg-4 order-lg-1 text-center">
-        <img src="/img/shoes.jpg" class="mx-auto img-fluid img-circle d-block" alt="avatar">
+        <img src="{{/img/usersPhotos/$formateur->image}}" class="mx-auto img-fluid img-circle d-block" alt="avatar">
         <h6 class="mt-2">Changer photo</h6>
         <label class="custom-file">
           <input type="file" id="file" class="custom-file-input">

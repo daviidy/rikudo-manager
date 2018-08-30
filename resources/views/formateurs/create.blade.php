@@ -65,6 +65,8 @@
 							<option>Laboratoire Cisco CCNA</option>
 							<option>Comment installer Unity et coder son jeu ?</option>
 							<option>Booster son business avec Facebook</option>
+							<option>Apprendre Photoshop</option>
+							<option>Apprendre After Effects</option>
 						</select>
 					</div>
 					<span class="focus-input100"></span>
