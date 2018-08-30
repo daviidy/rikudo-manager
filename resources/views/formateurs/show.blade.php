@@ -156,7 +156,7 @@
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">ComptePaypal</label>
                 <div class="col-lg-9">
-                  <input class="form-control" name="{{$formateur->ComptePaypal}}" type="text">
+                  <input class="form-control" name="ComptePaypal" type="text" value="{{$formateur->ComptePaypal}}">
                 </div>
               </div>
               <div class="form-group row">
