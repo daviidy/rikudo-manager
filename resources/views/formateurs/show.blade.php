@@ -201,6 +201,12 @@
                             </div>
                         </div> -->
               <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Photo</label>
+                <div class="col-lg-9">
+                  <input type="file" name="image">
+                </div>
+              </div>
+              <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label"></label>
                 <div class="col-lg-9">
                   <input type="reset" class="btn btn-secondary" value="Annuler">
@@ -213,11 +219,6 @@
       </div>
       <div class="col-lg-4 order-lg-1 text-center">
         <img src="/img/usersPhotos/{{$formateur->image}}" class="mx-auto img-fluid img-circle d-block" alt="avatar">
-        <h6 class="mt-2">Changer photo</h6>
-        <label class="custom-file">
-          <input type="file" id="file" class="custom-file-input">
-          <span class="custom-file-control">Choisir fichier</span>
-        </label>
       </div>
     </div>
   </div>
