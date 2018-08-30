@@ -72,6 +72,12 @@
 					<span class="focus-input100"></span>
 				</div>
 
+				<div class="wrap-input100 validate-input" data-validate="Numero is required">
+					<span class="label-input100">Photo</span>
+					<input class="input100" type="file" name="image">
+					<span class="focus-input100"></span>
+				</div>
+
 				<div class="container-contact100-form-btn">
 					<div class="wrap-contact100-form-btn">
 						<div class="contact100-form-bgbtn"></div>

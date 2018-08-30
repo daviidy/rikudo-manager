@@ -80,6 +80,7 @@ class FormateurController extends Controller
     public function update(Request $request, Formateur $formateur)
     {
         $formateur->update($request->all());
+        
         if($request->hasFile('image')){
 
           $image = $request->file('image');

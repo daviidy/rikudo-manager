@@ -7,7 +7,7 @@
     <div class="row my-2">
       <div class="col-lg-8 order-lg-2">
         <ul class="nav nav-tabs">
-          <li class="nav-item">
+          <li class="nav-item"> 
             <a href="/" class="nav-link" aria-expanded="false">Accueil</a>
           </li>
           <li class="nav-item">

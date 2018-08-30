@@ -8,6 +8,9 @@
       <div class="col-lg-8 order-lg-2">
         <ul class="nav nav-tabs">
           <li class="nav-item">
+            <a href="/" class="nav-link" aria-expanded="false">Accueil</a>
+          </li>
+          <li class="nav-item">
             <a href="" data-target="#profile" data-toggle="tab" class="nav-link" aria-expanded="false">Profile</a>
           </li>
           <li class="nav-item">
@@ -135,37 +138,37 @@
           </form>
           </div>
           <div class="tab-pane active" id="edit" aria-expanded="true">
-            <form role="form" action="{{ url('formateurs', $formateur) }}" method="post">
+            <form enctype="multipart/form-data" role="form" action="{{ url('formateurs', $formateur) }}" method="post">
               {{ csrf_field() }}
               {{ method_field('patch') }}
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Nom</label>
                 <div class="col-lg-9">
-                  <input name="nom" class="form-control" type="text" value="Jane">
+                  <input name="nom" class="form-control" type="text" value="{{$formateur->nom}}">
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Prénoms</label>
                 <div class="col-lg-9">
-                  <input name="prenom" class="form-control" type="text" value="Bishop">
+                  <input name="prenom" class="form-control" type="text" value="{{$formateur->prenom}}">
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">ComptePaypal</label>
                 <div class="col-lg-9">
-                  <input class="form-control" name="ComptePaypal" type="text">
+                  <input class="form-control" name="{{$formateur->ComptePaypal}}" type="text">
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Numéro</label>
                 <div class="col-lg-9">
-                  <input class="form-control" type="text" value="" name="numero">
+                  <input class="form-control" type="text" value="{{$formateur->numero}}" name="numero">
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Email</label>
                 <div class="col-lg-9">
-                  <input class="form-control" type="url" value="">
+                  <input class="form-control" type="email" value="{{$formateur->email}}">
                 </div>
               </div>
               <div class="form-group row">
