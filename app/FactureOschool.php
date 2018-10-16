@@ -11,7 +11,7 @@ class FactureOschool extends Model
 
  public function clientOschool()
  {
-     return $this->belongsTo('App\ClientOschool');
+     return $this->belongsTo('App\ClientOschool', 'client_oschool_id');
  }
 
 }
