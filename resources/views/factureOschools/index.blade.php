@@ -38,6 +38,6 @@
   </div>
 </div>
 
-{{ $clientOschools->links() }}
+{{ $factureOschools->links() }}
 
 @endsection

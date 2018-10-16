@@ -19,9 +19,8 @@ class FactureOschoolController extends Controller
       if (!Auth::check()) {
         return redirect('login');
       }
-      $factureOschools = FactureOschool::orderBy ('date_de_paiement','asc')->paginate(30);
-      $clientOschools = ClientOschool::orderBy ('nom','asc')->paginate(30);
-      return view('factureOschools.index', ['clientOschools' => $clientOschools, 'factureOschools' => $factureOschools]);
+      $factureOschools = FactureOschool::orderBy ('date_de_paiement','asc')->paginate(60);
+      return view('factureOschools.index', ['factureOschools' => $factureOschools]);
     }
 
     /**
